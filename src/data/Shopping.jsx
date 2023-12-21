@@ -15,7 +15,8 @@ export const shopping = [
       'The low profile sneakers are your perfect casual wear companion. Featuring a durable rubbber outer sole, they withstand everything the weather can offer',
       categories: "SNEAKER COMPANY",
     owner: "SNEAKER COMPANY",
-    quantity: 0,
+    quantity: 7,
+    
   },
   {
     id: 2,

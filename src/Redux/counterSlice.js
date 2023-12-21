@@ -1,49 +1,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const counterSlice = createSlice({
-    name: 'counter',
+  name: 'counter',
   initialState: {
-    count: 1,
-    counter: 0,
-    children: 0,
-    email: 'abdullahisamsudden@gmail.com',
+    cart: [],
   },
   reducers: {
-    increment: (state) => {
-      if (state.count < 4) {
-        state.count += 1;
-      }
+    increment: (state, payload) => {
+      // state.cart = state.cart + 1
+      let productItem = state.cart.find((item) => item.id === payload.payload )
+      productItem.cartQuantity +=1
+      console.log(payload);
     },
     decrement: (state) =>{
-        state.count = state.count > 0 ? state.count - 1 : 0
+        // state.cart = state.cart > 0 ? state.cart - 1 : 0
+        let productItem = state.cart.find((item) => item.id === payload.payload )
+        productItem.cartQuantity -=1
+        console.log(payload);
     },
-
-
-    add: (state) => {
-      if (state.children < 2) {
-        state.children += 1;
-      }
-    },
-    minus: (state) =>{
-        state.children = state.children > 0 ? state.children - 1 : 0
-    },
-
-    increase: (state) => {
-      if (state.counter < 6) {
-        state.counter += 1;
-      }
-    },
-    decrease: (state, action) => {
-      state.counter -= action.payload; // Subtracts the payload value from the count
-      if (state.counter < 0) {
-        state.counter = 0; // Ensure the count doesn't go negative
-      }
-    },
-    setEmail: (state, action) => {
-      state.email = action.payload; // Set the email value based on the payload
-    },
+    addToCart: (state, payload) =>{
+      state.cart.push(payload.payload)
+  },
   }
 })
 
-export const { increment, decrement, increase, decrease, add, minus, setEmail } = counterSlice.actions
+export const { increment, decrement, addToCart } = counterSlice.actions
 export default counterSlice.reducer
+

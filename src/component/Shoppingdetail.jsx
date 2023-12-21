@@ -6,12 +6,21 @@ import { GrNext, GrPrevious } from 'react-icons/gr'
 import Shopheader from './Shopheader';
 import Footer from '../FooterComponent/Footer';
 import Shopfooter from './Shopfooter';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, increment } from '../Redux/counterSlice';
+
 
 
 const Shoppingdetail = () => {
-  let storage = JSON.parse(localStorage.getItem('productdetail'));
-  console.log(storage);
 
+  
+  const dispatch = useDispatch();
+  const cartProduct = useSelector((state)=> state.counterReducer.cart);
+  console.log(cartProduct);
+  let storage = JSON.parse(localStorage.getItem('productdetail'));
+  // console.log(storage);
+
+  
   const [storageData, setStorageData] = useState({});
   const [cart, setCart] = useState([]);
   const [current, setCurrent] = useState(0); // Initialize current to 0 for the first image
@@ -20,18 +29,38 @@ const Shoppingdetail = () => {
       setStorageData(storage);
   }, []);
 
-  const addToCart = () => {
-      const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-      const isProductInCart = cartItems.some(item => item.id === storageData.id);
-
-      if (!isProductInCart) {
-          cartItems.push(storageData);
-          setCart(cartItems);
-          localStorage.setItem('cart', JSON.stringify(cartItems));
-          alert('Product added to cart!');
-      } else {
-          alert('This product is already in the cart!');
+  const addCart = () => {
+    const productItem = cartProduct.find((item) => item.id === storage.id )
+    // console.log(productItem);
+    if(productItem){
+      dispatch(increment(productItem.id))
+    } else{
+      let newCart = {
+        product: storage.title,
+        id: storage.id,
+        price: storage.price,
+        cartQuantity: 1,
       }
+      dispatch(addToCart(newCart))
+    }
+    
+      // const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+      // const cartItems1 = JSON.parse(localStorage.getItem('cartId')) || [];
+      // const isProductInCart = cartItems.some(item => item.id === storageData.id);
+      // const cartId = storageData.id;
+      // console.log(cartId);
+      // localStorage.setItem('cartId', JSON.stringify(cartId));
+
+      // if (!isProductInCart) {
+      //     cartItems.push(storageData);
+      //     setCart(cartItems);
+      //     localStorage.setItem('cart', JSON.stringify(cartItems));
+      //     // console.log(cartItems);
+      //     alert('Product added to cart!');
+      // } else {
+      //     alert('This product is already in the cart!');
+      // }
+
   };
 
   const images = [storageData.photo, storageData.photo3, storageData.photo2, storageData.photo4];
@@ -74,7 +103,7 @@ const Shoppingdetail = () => {
           <div className='text-xl font-bold mt-2 text-pink-600'>{storageData.categories}</div>
           <div className='mt-2'>${storageData.price}</div>
           <div className='mt-2 text-sm'>{storageData.summaries}</div>
-          <button className='bg-pink-600 w-[50%] p-2 mt-10 text-white rounded font-bold' onClick={addToCart}>ADD TO CART</button>
+          <button className='bg-pink-600 w-[50%] p-2 mt-10 text-white rounded font-bold' onClick={addCart}>ADD TO CART</button>
           </div>
          
           </div>
