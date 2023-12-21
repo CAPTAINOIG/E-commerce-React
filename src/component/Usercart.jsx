@@ -4,33 +4,52 @@ import { increment, decrement } from '../Redux/counterSlice';
 import cart from '../assets/cart.webp'
 
 const Usercart = () => {
-    // const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    
     const dispatch = useDispatch();
     const shoppingCart = useSelector((state)=> state.counterReducer.cart);
     console.log(shoppingCart);
 
+
+
+    const [cartQuantity, setCartQuantity] = useState(0)
     
+    // reduce is being utilized to calculate the total quantity of items in the cart.
 
-
+    // let newPrice = shoppingCart.price * shoppingCart.cartQuantity
+    // console.log(newPrice);
 
     const handleIncrement = (item) => {
         // console.log(item);
-        const productItem = shoppingCart.find((cartItem) => cartItem.id === item.id)
+        // const productItem = shoppingCart.find((cartItem) => cartItem.id === item.id)
         // console.log(productItem);
 
-        if(productItem){
-            dispatch(increment(productItem.id))
-        } else {
-            console.log('No matching item found in the cart.');
-        }
+        // if(productItem){
+            dispatch(increment(item.id))
+    //     } else {
+    //         console.log('No matching item found in the cart.');
+    //     }
+    };
+
+    const handleDecrement = (item) => {
+        // const productItem = shoppingCart.find((cartItem) => cartItem.id === item.id)
+        // if(productItem){
+            dispatch(decrement(item.id))
+        // } else {
+        //     console.log('No matching item found in the cart.');
+        // }
     };
 
 
+    // useEffect(() => {
+    //     const updatedCartQuantity = shoppingCart.reduce((total, cartItem) => total + cartItem.cartQuantity, 0);
+    //     setCartQuantity(updatedCartQuantity);
+    // }, [shoppingCart]);
+    // Assuming shoppingCart is your array of items in the cart
 
-    const handleDecrement = () => {
-        dispatch(decrement());
-    };
+// Calculate total cart quantity
+// const totalCartQuantity = shoppingCart.reduce((total, cartItem) => total + cartItem.cartQuantity, 0);
+
+// // Set the total cart quantity in your state
+// setCartQuantity(totalCartQuantity);
 
 
     return (
@@ -43,12 +62,13 @@ const Usercart = () => {
                         <img src={item.photo} alt={item.title} className="w-full h-48 object-cover" />
                         <div className="p-4">
                             <h1 className="text-xl font-semibold mb-2">{item.title}</h1>
-                            <p className="text-gray-600 mb-2">{item.categories}</p>
-                            <p className="text-gray-700 mb-2">{item.summaries}</p>
-                            <p className="text-green-600 font-semibold">${item.price}</p>
+                            <p className="text-green-600 font-semibold">Price: ${item.price}</p>
+                            <p> {item.price}* {cartQuantity} items</p>
+                            <p>Subtotal: ${item.price * item.cartQuantity}</p>
                             <div className="flex justify-between mt-4">
                                 <button onClick={() => handleIncrement(item)} className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2">Add</button>
-                                <button onClick={handleDecrement} className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">Minus</button>
+                                {cartQuantity}
+                                <button onClick={() => handleDecrement(item)} className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">Minus</button>
                             </div>
                         </div>
                     </li>

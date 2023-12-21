@@ -62,6 +62,7 @@ const Shoppingdetail = () => {
   }, []);
 
   const addCart = () => {
+    alert('product added successfully')
     const productItem = cartProduct.find((item) => item.id === storage.id )
     if(productItem){
       dispatch(increment(productItem.id))
@@ -69,7 +70,7 @@ const Shoppingdetail = () => {
     } else{
       let newCart = {
         owner:storage.owner,
-        product: storage.title,
+        title: storage.title,
         id: storage.id,
         price: storage.price,
         cartQuantity: 1,

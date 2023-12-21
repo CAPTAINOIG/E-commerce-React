@@ -14,11 +14,11 @@ export const counterSlice = createSlice({
       productItem.cartQuantity +=1
       console.log(payload);
     },
-    decrement: (state) =>{
+    decrement: (state, action) =>{
         // state.cart = state.cart > 0 ? state.cart - 1 : 0
-        let productItem = state.cart.find((item) => item.id === payload.payload )
-        productItem.cartQuantity -=1
-        console.log(payload);
+        let productItem = state.cart.find((item) => item.id === action.payload )
+        productItem.cartQuantity > 0 ? productItem.cartQuantity -=1 : 0
+        // console.log(payload);
     },
     remove: (state, action)=> {
       state.cart.splice(action, payload, 1)
