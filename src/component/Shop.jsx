@@ -6,9 +6,9 @@ import Header from './Header';
 
 const Shop = () => {
   let navigate = useNavigate()
-  const productDetail = (e) => {
+  const productDetail = (item) => {
     navigate('/details');
-    localStorage.setItem('productdetail', JSON.stringify(e));
+    localStorage.setItem('productdetail', JSON.stringify(item));
   };
 
   return (

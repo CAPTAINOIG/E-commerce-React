@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Carty from './Carty';
-// import Carty from './Carty';
 import { GrNext, GrPrevious } from 'react-icons/gr'
-// import Header from './Header';
 import Shopheader from './Shopheader';
 import Footer from '../FooterComponent/Footer';
 import Shopfooter from './Shopfooter';
@@ -11,12 +9,46 @@ import { addToCart, increment } from '../Redux/counterSlice';
 
 
 
-const Shoppingdetail = () => {
 
-  
+// const addCart = () => {
+//   const productItem = cartProduct.find((item) => item.id === storage.id )
+//   const existingItems = JSON.parse(localStorage.getItem('items')) || [];
+//   if(productItem){
+//     dispatch(increment(productItem.id))
+//     const itemIndex = existingItems.findIndex((item) => item.id === storage.id);
+//     if (itemIndex !== -1) {
+//       existingItems[itemIndex].cartQuantity += 1;
+//     }
+//   } else{
+//     let newCart = {
+//       owner:storage.owner,
+//       product: storage.title,
+//       id: storage.id,
+//       price: storage.price,
+//       cartQuantity: 1,
+//       photo: storage.photo,
+//       photo2: storage.photo2,
+//       photo3: storage.photo3,
+//       photo4: storage.photo4,
+//       summaries: storage.summaries,
+//       categories: storage.categories,
+
+//     }
+//     dispatch(addToCart(newCart))
+//     existingItems.push(newCart);
+//   }
+//   localStorage.setItem('items', JSON.stringify(existingItems));
+
+// };
+
+
+
+const Shoppingdetail = () => {
   const dispatch = useDispatch();
   const cartProduct = useSelector((state)=> state.counterReducer.cart);
   console.log(cartProduct);
+
+
   let storage = JSON.parse(localStorage.getItem('productdetail'));
   // console.log(storage);
 
@@ -31,37 +63,28 @@ const Shoppingdetail = () => {
 
   const addCart = () => {
     const productItem = cartProduct.find((item) => item.id === storage.id )
-    // console.log(productItem);
     if(productItem){
       dispatch(increment(productItem.id))
+      // localStorage.setItem('item', JSON.stringify(productItem));
     } else{
       let newCart = {
+        owner:storage.owner,
         product: storage.title,
         id: storage.id,
         price: storage.price,
         cartQuantity: 1,
+        photo: storage.photo,
+        photo2: storage.photo2,
+        photo3: storage.photo3,
+        photo4: storage.photo4,
+        summaries: storage.summaries,
+        categories: storage.categories,
       }
       dispatch(addToCart(newCart))
+      // localStorage.setItem('item', JSON.stringify(newCart));
     }
-    
-      // const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-      // const cartItems1 = JSON.parse(localStorage.getItem('cartId')) || [];
-      // const isProductInCart = cartItems.some(item => item.id === storageData.id);
-      // const cartId = storageData.id;
-      // console.log(cartId);
-      // localStorage.setItem('cartId', JSON.stringify(cartId));
-
-      // if (!isProductInCart) {
-      //     cartItems.push(storageData);
-      //     setCart(cartItems);
-      //     localStorage.setItem('cart', JSON.stringify(cartItems));
-      //     // console.log(cartItems);
-      //     alert('Product added to cart!');
-      // } else {
-      //     alert('This product is already in the cart!');
-      // }
-
-  };
+  }
+   
 
   const images = [storageData.photo, storageData.photo3, storageData.photo2, storageData.photo4];
   const length = images.length;
