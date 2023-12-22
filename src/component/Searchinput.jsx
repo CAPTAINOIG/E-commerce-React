@@ -16,14 +16,14 @@ const Searchinput = () => {
 
   return (
     <div>
-      <h1>Search Page</h1>
-      <input
+    
+      <input className='lg:w-[70%] w-[50%] lg:ms-0 ms-10 lg:mt-0 mt-3 border rounded border-pink-600 dark:border-gray-900' 
         type="text"
-        placeholder="Enter your search term"
+        placeholder="search"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className='lg:text-xl text-sm' onClick={handleSearch}>Search</button>
       {searchResults.map((result, index) => (
         <div key={index}>{result.name}</div>
       ))}

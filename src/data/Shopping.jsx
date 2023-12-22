@@ -61,7 +61,7 @@ export const shopping = [
     photo:
     "/image/image4.jpg",
     photo2:
-      "/image/imagee4.png",
+      "/image/imagee4.jpg",
       photo3:
       "/image/imaged4.jpg",
       photo4:

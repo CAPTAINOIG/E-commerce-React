@@ -9,6 +9,7 @@ import './App.css'
 import Shoppingdetail from './component/Shoppingdetail'
 import Usercart from './component/Usercart'
 import Datadetails from './component/Datadetails'
+import Paystack from './component/Paystack'
 
 
 
@@ -24,7 +25,7 @@ function App() {
     <Route path='/' element={<Datadetails/>}/>
     <Route path='/details' element={<Shoppingdetail/>}/>
     <Route path='/cart' element={<Usercart/>}/>
-
+    <Route path='/paystack' element={<Paystack/>}/>
     </Routes>
     
    

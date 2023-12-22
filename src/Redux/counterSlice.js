@@ -21,15 +21,18 @@ export const counterSlice = createSlice({
         // console.log(payload);
     },
     remove: (state, action)=> {
-      state.cart.splice(action, payload, 1)
+      state.cart.splice(action.payload, 1)
     },
+    
+
+    
     addToCart: (state, payload) =>{
       state.cart.push(payload.payload)
   },
   }
 })
 
-export const { increment, decrement, addToCart } = counterSlice.actions
+export const { increment, decrement, remove, addToCart } = counterSlice.actions
 export default counterSlice.reducer
 
 

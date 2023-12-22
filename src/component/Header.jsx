@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { GiCartwheel } from 'react-icons/gi';
 // import { FiShoppingCart } from 'react-icons/fi'; // Updated icons
 import { BsSun } from 'react-icons/bs';
@@ -9,25 +9,39 @@ import { AppContext } from '../context/Dashboard';
 import Carty from './Carty';
 import Searchinput from './Searchinput';
 import image7 from '../assets/image7.jpg'
+import { useSelector } from 'react-redux';
+
 const Header = () => {
     // console.log(userCart);
     const { theme, setTheme } = useContext(AppContext)
-    console.log(theme);
+    // console.log(theme);
+
+    const store = useSelector((state)=> state.counterReducer.cart);
+    //   console.log(store);
+    
+    const [cartQuantity, setCartQuantity] = useState("")
+    
+    
+      useEffect(() => {
+        const updatedCartQuantity = store.reduce((total, store) => total + store.cartQuantity, 0);
+        console.log(updatedCartQuantity);
+        setCartQuantity(updatedCartQuantity)
+    }, [store]);
    
 
     
 
     return (
-        <div className='p-4  ms-[-15px] flex justify-between  bg-white fixed top-0 w-full font-bold font-serif'>
+        <div className='p-4 ms-[-15px] flex justify-between  text-pink-600 dark:text-gray-900 bg-white fixed top-0 w-full font-bold font-serif'>
             <Link to="/" className='flex items-center gap-1'>
                 
-                <img src={image7} alt="" className='h-10 object-cover rounded-md' />
-                <span className='font-bold text-xl text-pink-600 '>captain</span>
+                <img src={image7} alt="" className='h-8 w-8 border border-pink-600 dark:border-gray-900 rounded-full' />
+                <span className='font-bold lg:text-xl text-sm'>captain</span>
             </Link>
-            <Searchinput/>
+            <Searchinput  />
             <div className='flex'>
                 <div className='flex lg:me-5 font-bold font-serif lg:gap-2 mt-3'>
-                    <span className='text-pink-900 dark:text-gray-900'>Captainbnb your home </span>
+                    <span className='lg:text-xl text-sm'></span>
                     <div className='mt-1'>
                         {
                             theme === 'dark' ?
@@ -37,6 +51,7 @@ const Header = () => {
                     </div>
                     
                     <Carty/>
+                    {cartQuantity}
                 </div>
             </div>
         </div>

@@ -1,23 +1,34 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { GiCartwheel } from 'react-icons/gi';
-
 import { Link } from 'react-router-dom';
 import Carty from './Carty';
+import { useSelector } from 'react-redux';
 
 
 const Shopheader = () => {
+    const store = useSelector((state)=> state.counterReducer.cart);
+//   console.log(store);
+
+const [cartQuantity, setCartQuantity] = useState("")
+
+
+  useEffect(() => {
+    const updatedCartQuantity = store.reduce((total, store) => total + store.cartQuantity, 0);
+    console.log(updatedCartQuantity);
+    setCartQuantity(updatedCartQuantity)
+}, [store]);
 
     return (
         <div className='p-4 z-20 flex justify-between bg-pink-600 text-white fixed top-0 w-full font-bold font-serif'>
             <Link to="/" className='flex items-center gap-1'>
                 <GiCartwheel size={25} className='' />
                 <span className='font-bold text-xl'>captain</span>
-            </Link>
-            <div className='flex'>
-                <div className='flex lg:me-5 font-bold font-serif lg:gap-2 mt-3'>
-                    <span className=''>Captainbnb your home </span>
-                    
-                    <Carty/>
+                </Link>
+                <div className='flex'>
+                <div className='flex lg:me-5 font-bold font-serif mt-3'>
+                <span className='lg:me-5 me-5'> Add Item</span>
+                <Carty/>
+                <span className='text-sm'>{cartQuantity}</span>
                 </div>
             </div>
         </div>
