@@ -41,25 +41,12 @@ const Usercart = () => {
     }, 1000);
     }
 
-    // useEffect(() => {
-    //     const updatedCartQuantity = shoppingCart.reduce((total, shoppingCart) => total + shoppingCart.cartQuantity, 0);
-    //     console.log(updatedCartQuantity);
-    //     setCartQuantity(updatedCartQuantity)
-    // }, [shoppingCart]);
-    // Assuming shoppingCart is your array of items in the cart
-
-// Calculate total cart quantity
-// const totalCartQuantity = shoppingCart.reduce((total, cartItem) => total + cartItem.cartQuantity, 0);
-
-// // Set the total cart quantity in your state
-// setCartQuantity(totalCartQuantity);
-
 
     return (
         <div>
-        <div className='absolute font-bolder text-pink-700 lg:ms-[42%] mt-[-63%] ms-20 text-sm lg:mt-[-13%]'>{message}</div>
         <Shopheader />
         <div className="container mx-auto">
+        <div className='absolute font-bolder text-pink-700 lg:ms-[42%] mt-[-63%] ms-20 text-sm lg:mt-[-13%]'>{message}</div>
         {shoppingCart.length > 0 ? (
             <>
             <Checkout />
