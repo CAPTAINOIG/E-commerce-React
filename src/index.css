@@ -2,3 +2,18 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
+
+.background{
+    background-image: url(./assets/image.jpg);
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+::placeholder{
+    color: palevioletred;
+    font-weight: bold;
+}

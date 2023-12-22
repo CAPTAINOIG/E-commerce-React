@@ -12,7 +12,9 @@ const Carty = () => {
       }
   
   return (
-    <div> <button className='' onClick={()=> userCart()}><BsCart4 /></button></div>
+    <div> <button className='' onClick={()=> userCart()}><BsCart4 /></button>
+    
+    </div>
  
   )
 }

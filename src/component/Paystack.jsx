@@ -34,7 +34,7 @@ const Paystack = () => {
             const paystack = new PaystackPop();
             paystack.newTransaction({
                 key: publicKey,
-                amount: newPaystack * 100,
+                amount: cartQuantity * 100,
                 email,
                 firstName,
                 lastName,
@@ -55,33 +55,31 @@ const Paystack = () => {
 
     return (
         <>
-        <div className="continer mx-auto">
-        <div className="flex justify-center">
-          <div className="w-full lg:w-2/3 mt-20">
-            <div className="bg-pink-700 p-4 rounded-t-lg">
-              <h3 className="text-white text-center">Make Payment</h3>
-            </div>
-            <div className="mt-8">
-              <div className="bg-white shadow-md rounded-lg p-8">
+        <div className="background continer mx-auto">
+        <div className="flex justify-center text-pink-700 text-sm">
+          <div className="lg:w-[30%] w-[80%] mt-20">
+          <div className="">
+          <div className="bg-white shadow-md rounded-lg p-2">
+          <h3 className="text-white text-center bg-pink-700 p-2 rounded mb-4">Make Payment</h3>
                 <form id="paymentForm">
                   <div className="mb-4">
                     <label htmlFor="email" className="block">Email Address</label>
                     <input
                       type="email"
                       id="email-address"
-                      className="w-full border-gray-300 border rounded-md p-2"
+                      className="w-full border-pink-300 border-2 rounded-md p-1 focus:outline-pink-500 focus:border-pink-500"
                       onChange={(e) => setEmail(e.target.value)}
                       value={email}
                     />
                   </div>
                   <div className="mb-4">
-                    <label htmlFor="amount" className="block">Amount</label>
+                    <label htmlFor="amount" className="block">($)Amount</label>
                     <input
                       type="tel"
                       id="amount"
-                      placeholder={`${cartQuantity}`}
+                      placeholder={`$${cartQuantity}`}
                       disabled
-                      className="w-full border-gray-300 border rounded-md p-2"
+                      className="w-full border-pink-300 border-2 rounded-md p-1 focus:outline-pink-500 focus:border-pink-500"
                       value={amount}
                     />
                   </div>
@@ -90,7 +88,7 @@ const Paystack = () => {
                     <input
                       type="text"
                       id="first-name"
-                      className="w-full border-gray-300 border rounded-md p-2"
+                      className="w-full border-pink-300 border-2 rounded-md p-1 focus:outline-pink-500 focus:border-pink-500"
                       onChange={(e) => setFirstName(e.target.value)}
                       value={firstName}
                     />
@@ -100,13 +98,13 @@ const Paystack = () => {
                     <input
                       type="text"
                       id="last-name"
-                      className="w-full border-gray-300 border rounded-md p-2"
+                      className="w-full border-pink-300 border-2 rounded-md p-1 focus:outline-pink-500 focus:border-pink-500"
                       onChange={(e) => setLastName(e.target.value)}
                       value={lastName}
                     />
                   </div>
                   <button
-                    className="bg-pink-700 text-white w-full py-2 rounded-md hover:bg-orange-600"
+                    className="bg-pink-700 text-white w-full py-2 rounded-md hover:bg-pink-900"
                     type="submit"
                     onClick={payWithPayStack}
                   >

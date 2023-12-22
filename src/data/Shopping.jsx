@@ -10,7 +10,7 @@ export const shopping = [
       "/image/imaged1.jpg",
       photo4:
       "/image/imager1.jpg",
-    price: "75.00",
+    price: "100.00",
     summaries:
       'The low profile sneakers are your perfect casual wear companion. Featuring a durable rubbber outer sole, they withstand everything the weather can offer',
       categories: "SNEAKER COMPANY",
@@ -66,7 +66,7 @@ export const shopping = [
       "/image/imaged4.jpg",
       photo4:
       "/image/imager4.jpg",
-    price: "20.00",
+    price: "120.00",
     summaries:
       "It captures the essence of the product, highlighting its digital representation and connection to a renowned masterpiece.",
     categories: "FASHION",
@@ -87,7 +87,7 @@ export const shopping = [
       "/image/imaged5.jpg",
       photo4:
       "/image/imager5.jpg",
-    price: "75.00",
+    price: "175.00",
     summaries:
       "Crafted with premium quality denim, this wardrobe staple exudes versatility and effortless charm.",
     categories: "DENIM",
@@ -141,7 +141,7 @@ export const shopping = [
       "/image/imaged8.jpg",
       photo4:
       "/image/imager8.jpg",
-    price: "20.00",
+    price: "120.00",
     summaries:
       "innovation and convenience combined. Explore cutting-edge technology and sleek design, offering a powerful and user-friendly experience",
     categories: "ANDROID",
@@ -206,7 +206,7 @@ export const shopping = [
     title: "Pi Oasis",
     photo:
     "/image/image12.jpg",
-    price: "20.00",
+    price: "120.00",
     summaries:
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
     categories: "Art",
@@ -288,7 +288,7 @@ export const shopping = [
     id: 18,
     title: "Pixelmon - Generation",
     photo:
-    "/image/image18.jpg",
+    "/image/image18.webp",
     price: "180.00",
     summaries:
       "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
@@ -300,7 +300,7 @@ export const shopping = [
     id: 19,
     title: "Fool Again by Westlife",
     photo:
-    "/image/image19.png",
+    "/image/image19.jpg",
     price: "150.00",
     summaries:
       "Feel the nostalgia and emotion with Westlife's classic 'Fool Again.' A digital masterpiece to touch your soul.",
