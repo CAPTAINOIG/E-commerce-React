@@ -26,9 +26,9 @@ const [cartQuantity, setCartQuantity] = useState("")
                 </Link>
                 <div className='flex'>
                 <div className='flex lg:me-5 font-bold font-serif mt-3'>
-                <span className='lg:me-5 me-5'> Add Item</span>
+                <span className='lg:me-5 me-5'>Item</span>
                 <Carty/>
-                <span className='text-sm'>{cartQuantity}</span>
+                <span className='text-sm'>{cartQuantity ? cartQuantity : ''}</span>
                 </div>
             </div>
         </div>

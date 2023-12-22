@@ -51,7 +51,7 @@ const Header = () => {
                     </div>
                     
                     <Carty/>
-                    {cartQuantity}
+                    <span className='text-sm'>{cartQuantity ? cartQuantity : ''}</span>
                 </div>
             </div>
         </div>
