@@ -15,7 +15,8 @@ const Usercart = () => {
 
 
 
-    // const [cartQuantity, setCartQuantity] = useState('')
+
+    const [message, setMessage] = useState('')
     
     // reduce is being utilized to calculate the total quantity of items in the cart.
 
@@ -31,9 +32,14 @@ const Usercart = () => {
     };
 
     const handleRemove = (index) => {
-       alert('Are You Sure You want to Remove?')
+       alert('Do You really want to Remove this item from cart?')
     dispatch(remove(index))
-    };
+    setMessage('product was removed from cart')
+    
+    setTimeout(() => {
+        setMessage('');
+    }, 1000);
+    }
 
     // useEffect(() => {
     //     const updatedCartQuantity = shoppingCart.reduce((total, shoppingCart) => total + shoppingCart.cartQuantity, 0);
@@ -51,6 +57,7 @@ const Usercart = () => {
 
     return (
         <div>
+        <div className='absolute font-bolder text-pink-700 lg:ms-[42%] mt-[-63%] ms-20 text-sm lg:mt-[-13%]'>{message}</div>
         <Shopheader />
         <div className="container mx-auto">
         {shoppingCart.length > 0 ? (
@@ -58,6 +65,7 @@ const Usercart = () => {
             <Checkout />
             
             <h2 className="text-3xl font-bold mb-4 lg:px-0 px-4">Your Cart ({shoppingCart.length})</h2>
+            
             <ul className="grid gap-6 sm:grid-cols-2 lg:px-0 px-4 lg:grid-cols-3 xl:grid-cols-4">
                         {shoppingCart.map((item, index) => (
                             <li key={index} className="border relative rounded-lg overflow-hidden shadow-lg">

@@ -17,3 +17,14 @@
     color: palevioletred;
     font-weight: bold;
 }
+
+/* styles.css */
+.message {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.message.show {
+    opacity: 1;
+}
+

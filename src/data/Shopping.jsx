@@ -190,26 +190,26 @@ export const shopping = [
   },
   {
     id: 11,
-    title: "Fool Again by Westlife",
+    title: "TOPPIK",
     photo:
     "/image/image11.jpg",
     price: "150.00",
     summaries:
       "Feel the nostalgia and emotion with Westlife's classic 'Fool Again.' A digital masterpiece to touch your soul.",
-    categories: "Music",
+    categories: "SPRAY",
     music: "/music/Westlife_Fool again.mp3",
     owner: "Westlife",
     quantity: 0,
   },
   {
     id: 12,
-    title: "Pi Oasis",
+    title: "TV OASIS",
     photo:
     "/image/image12.jpg",
     price: "120.00",
     summaries:
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
-    categories: "Art",
+    categories: "OASIS",
     owner: "Risidio",
     quantity: 0,
   },
@@ -220,31 +220,31 @@ export const shopping = [
 
   {
     id: 13,
-    title: "BoomLand - Shards",
+    title: "UPS",
     photo:
       "/image/image13.jpg",
     price: "75.00",
     summaries:
       "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
-    categories: "Gaming",
+    categories: "UPS",
     owner: "Risidio",
     quantity: 0,
   },
   {
     id: 14,
-    title: "Pixelmon - Generation",
+    title: "POWER BANK",
     photo:
     "/image/image14.jpg",
     price: "180.00",
     summaries:
       "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
-    categories: "Art",
+    categories: "POWER BANK",
     owner: "Risidio",
     quantity: 0,
   },
   {
     id: 15,
-    title: "Fool Again by Westlife",
+    title: "SPEAKER",
     photo:
     "/image/image15.jpg",
     price: "150.00",
@@ -257,13 +257,13 @@ export const shopping = [
   },
   {
     id: 16,
-    title: "Pi Oasis",
+    title: "REFRIGERATOR",
     photo:
     "/image/image16.jpg",
     price: "20.00",
     summaries:
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
-    categories: "Art",
+    categories: "FREEZER",
     owner: "Risidio",
     quantity: 0,
   },
@@ -274,50 +274,50 @@ export const shopping = [
 
   {
     id: 17,
-    title: "BoomLand - Shards",
+    title: "BOOMLAND - SHARDS",
     photo:
       "/image/image17.jpg",
     price: "75.00",
     summaries:
       "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
-    categories: "Gaming",
+    categories: "FASHION",
     owner: "Risidio",
     quantity: 0,
   },
   {
     id: 18,
-    title: "Pixelmon - Generation",
+    title: "CAP",
     photo:
     "/image/image18.webp",
     price: "180.00",
     summaries:
       "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
-    categories: "Art",
+    categories: "FASHION",
     owner: "Risidio",
     quantity: 0,
   },
   {
     id: 19,
-    title: "Fool Again by Westlife",
+    title: "SKECHER",
     photo:
     "/image/image19.jpg",
     price: "150.00",
     summaries:
       "Feel the nostalgia and emotion with Westlife's classic 'Fool Again.' A digital masterpiece to touch your soul.",
-    categories: "Music",
+    categories: "FASHION",
     music: "/music/Westlife_Fool again.mp3",
     owner: "Westlife",
     quantity: 0,
   },
   {
     id: 20,
-    title: "Pi Oasis",
+    title: "BURGER",
     photo:
     "/image/image20.jpg",
     price: "20.00",
     summaries:
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
-    categories: "Art",
+    categories: "CHOP",
     owner: "Risidio",
     quantity: 0,
   },
