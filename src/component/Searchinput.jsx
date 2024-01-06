@@ -59,7 +59,7 @@ const Searchinput = () => {
   
 
   return (
-    <div className="w-[30%] flex items-center relative" ref={searchBoxRef}>
+    <div className="lg:w-[30%] w-[70%] flex items-center relative" ref={searchBoxRef}>
       {/* Search Box */}
       <input
         type="text"
@@ -68,10 +68,10 @@ const Searchinput = () => {
         onFocus={() => setShowDropdown(true)}
         // onBlur={() => setShowDropdown(false)}
         placeholder="Search..."
-        className="lg:w-[100%] w-[70%] lg:ms-[0%] ms-8 border border-gray-300 rounded-s-sm px-2 py-1 text-black"
+        className="lg:w-[100%] w-[70%] lg:ms-[0%] ms-2 border border-gray-300 rounded-s-sm px-2 py-1 text-black"
       />
-      <div className="bg-blue-500 py-[6.5px] px-[8px] my-auto flex justify-center rounded-e-sm cursor-pointer">
-        <BsSearch className="cursor-pointer" size={24} />
+      <div className=" dark:bg-gray-600 bg-pink-600 py-[6.5px] px-[8px] my-auto flex justify-center rounded-e-sm cursor-pointer">
+        <BsSearch className="cursor-pointer text-white" size={24} />
       </div>
 
       {/* Dropdown */}

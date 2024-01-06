@@ -4,6 +4,7 @@ import Shopheader from './Shopheader';
 import Shopfooter from './Shopfooter';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, increment } from '../Redux/counterSlice';
+import Swal from 'sweetalert2'; // Import SweetAlert
 
 
 const Shoppingdetail = () => {
@@ -21,30 +22,36 @@ const Shoppingdetail = () => {
     setStorageData(storage);
   }, []);
 
-  const addCart = () => {
-    alert('product added successfully')
-    const productItem = cartProduct.find((item) => item.id === storage.id)
-    if (productItem) {
-      dispatch(increment(productItem.id))
-      // localStorage.setItem('item', JSON.stringify(productItem));
-    } else {
-      let newCart = {
-        owner: storage.owner,
-        title: storage.title,
-        id: storage.id,
-        price: storage.price,
-        cartQuantity: 1,
-        photo: storage.photo,
-        photo2: storage.photo2,
-        photo3: storage.photo3,
-        photo4: storage.photo4,
-        summaries: storage.summaries,
-        categories: storage.categories,
-      }
-      dispatch(addToCart(newCart))
-    }
-  }
+  
+const addCart = () => {
+  Swal.fire({ // Use SweetAlert instead of alert
+    icon: 'success',
+    title: 'Product added successfully',
+    showConfirmButton: false,
+    timer: 1500 // Automatically close after 1.5 seconds
+  });
 
+  const productItem = cartProduct.find((item) => item.id === storage.id);
+  if (productItem) {
+    dispatch(increment(productItem.id));
+    // localStorage.setItem('item', JSON.stringify(productItem));
+  } else {
+    let newCart = {
+      owner: storage.owner,
+      title: storage.title,
+      id: storage.id,
+      price: storage.price,
+      cartQuantity: 1,
+      photo: storage.photo,
+      photo2: storage.photo2,
+      photo3: storage.photo3,
+      photo4: storage.photo4,
+      summaries: storage.summaries,
+      categories: storage.categories,
+    };
+    dispatch(addToCart(newCart));
+  }
+};
   const images = [storageData.photo, storageData.photo3, storageData.photo2, storageData.photo4];
   const length = images.length;
 

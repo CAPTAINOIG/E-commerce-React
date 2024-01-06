@@ -6,6 +6,7 @@ import {CiCircleRemove} from 'react-icons/ci'
 import Checkout from './Checkout';
 import Shopfooter from './Shopfooter';
 import Shopheader from './Shopheader';
+import Swal from 'sweetalert2'; // Import SweetAlert
 
 
 const Usercart = () => {
@@ -32,14 +33,38 @@ const Usercart = () => {
     };
 
     const handleRemove = (index) => {
-       alert('Do You really want to Remove this item from cart?')
-    dispatch(remove(index))
-    setMessage('product was removed from cart')
+        Swal.fire({
+          title: 'Do you really want to remove this item from cart?',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, remove it!',
+          cancelButtonText: 'No, keep it',
+          icon: 'warning'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            dispatch(remove(index));
+            setMessage('Product was removed from cart');
+            Swal.fire(
+              'Removed!',
+              'Your item has been removed from the cart.',
+              'success'
+            );
+            setTimeout(() => {
+                setMessage('');
+            }, 4000);
+        }
+        
+          
+          else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire(
+              'Cancelled',
+              'Your item is safe :)',
+              'error'
+            );
+          }
+        });
+      };
     
-    setTimeout(() => {
-        setMessage('');
-    }, 1000);
-    }
+   
 
 
     return (
