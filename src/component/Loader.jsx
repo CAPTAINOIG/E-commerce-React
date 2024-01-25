@@ -18,13 +18,13 @@ const Loader = () => {
   }, [navigate]);
 
   return (
-    <div>
+    <div className='relative'>
       {loading ? (
-        <div className="loading-container">
+        <div className='bg-slate-200 dark:bg-slate-200 h-screen w-full absolute'>
           <img id='img'
             src={loaderimage}
             alt="Loading..."
-            style={{ display: 'block', margin: '0 auto', width: '250px', height: '250px', marginTop:'200px' }}
+            style={{ display: 'block', margin: '0 auto', width: '250px', height: '250px', marginTop:'200px', backgroundColor:'red' }}
           />
         </div>
       ) : (
