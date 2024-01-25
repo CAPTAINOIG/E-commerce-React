@@ -1,51 +1,55 @@
-// CustomModal.jsx
+import React from "react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 
-import React from 'react';
-import Modal from 'react-modal';
 
-// Set the root element that should be hidden from screen readers
-Modal.setAppElement('#root'); // Replace '#root' with the id or class of your root element
+const CustomModal = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-const customStyles = {
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    padding: '2rem',
-    borderRadius: '0.5rem',
-  },
-};
-
-const CustomModal = ({ isOpen, closeModal }) => {
   return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={closeModal}
-      style={customStyles}
-      contentLabel="Example Modal"
-    >
-      {/* Modal content */}
-      <div className="text-center">
-        <h2 className="text-2xl font-bold mb-4">Modal Title</h2>
-        <p>This is the modal content. You can add any React component here.</p>
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-
-        <button
-          onClick={closeModal}
-          className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Close Modal
-        </button>
-      </div>
-    </Modal>
+    <>
+      <Button onClick={onOpen}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={onClose} isDismissable={false}>
+        <ModalContent>
+          <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+          <ModalBody>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              pulvinar risus non risus hendrerit venenatis. Pellentesque sit
+              amet hendrerit risus, sed porttitor quam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              pulvinar risus non risus hendrerit venenatis. Pellentesque sit
+              amet hendrerit risus, sed porttitor quam.
+            </p>
+            <p>
+              Magna exercitation reprehenderit magna aute tempor cupidatat
+              consequat elit dolor adipisicing. Mollit dolor eiusmod sunt ex
+              incididunt cillum quis. Velit duis sit officia eiusmod Lorem
+              aliqua enim laboris do dolor eiusmod. Et mollit incididunt nisi
+              consectetur esse laborum eiusmod pariatur proident Lorem eiusmod
+              et. Culpa deserunt nostrud ad veniam.
+            </p>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="danger" variant="light" onClick={onClose}>
+              Close
+            </Button>
+            <Button color="primary" onClick={onClose}>
+              Action
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
   );
 };
 

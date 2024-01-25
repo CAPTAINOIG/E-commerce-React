@@ -13,6 +13,7 @@ const Usercart = () => {
   const dispatch = useDispatch();
   const shoppingCart = useSelector((state) => state.counterReducer.cart);
   console.log(shoppingCart);
+  // localStorage.setItem('shop', JSON.stringify(shoppingCart))
 
 
 

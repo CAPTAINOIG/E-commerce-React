@@ -14,7 +14,7 @@ const Modal = () => {
       setIsModalOpen(false);
     };
     return (
-        <div className="bg-gray-200 p-8">
+        <div className="bg-gray-200 dark:bg-white p-8">
           {/* Trigger button */}
           <button
             onClick={openModal}

@@ -193,6 +193,12 @@ export const shopping = [
     title: "TOPPIK",
     photo:
     "/image/image11.jpg",
+    photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "150.00",
     summaries:
       "Feel the nostalgia and emotion with Westlife's classic 'Fool Again.' A digital masterpiece to touch your soul.",
@@ -206,6 +212,12 @@ export const shopping = [
     title: "TV OASIS",
     photo:
     "/image/image12.jpg",
+    photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "120.00",
     summaries:
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
@@ -223,6 +235,12 @@ export const shopping = [
     title: "UPS",
     photo:
       "/image/image13.jpg",
+      photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "75.00",
     summaries:
       "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
@@ -235,6 +253,12 @@ export const shopping = [
     title: "POWER BANK",
     photo:
     "/image/image14.jpg",
+    photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "180.00",
     summaries:
       "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
@@ -247,6 +271,12 @@ export const shopping = [
     title: "SPEAKER",
     photo:
     "/image/image15.jpg",
+    photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "150.00",
     summaries:
       "Feel the nostalgia and emotion with Westlife's classic 'Fool Again.' A digital masterpiece to touch your soul.",
@@ -260,6 +290,12 @@ export const shopping = [
     title: "REFRIGERATOR",
     photo:
     "/image/image16.jpg",
+    photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "20.00",
     summaries:
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
@@ -277,6 +313,12 @@ export const shopping = [
     title: "BOOMLAND - SHARDS",
     photo:
       "/image/image17.jpg",
+      photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "75.00",
     summaries:
       "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
@@ -289,6 +331,12 @@ export const shopping = [
     title: "CAP",
     photo:
     "/image/image18.webp",
+    photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "180.00",
     summaries:
       "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
@@ -301,6 +349,12 @@ export const shopping = [
     title: "SKECHER",
     photo:
     "/image/image19.jpg",
+    photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "150.00",
     summaries:
       "Feel the nostalgia and emotion with Westlife's classic 'Fool Again.' A digital masterpiece to touch your soul.",
@@ -314,6 +368,12 @@ export const shopping = [
     title: "BURGER",
     photo:
     "/image/image20.jpg",
+    photo2:
+      "/image/imagee1.jpg",
+      photo3:
+      "/image/imaged1.jpg",
+      photo4:
+      "/image/imager1.jpg",
     price: "20.00",
     summaries:
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",

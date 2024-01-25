@@ -10,9 +10,10 @@ export const counterSlice = createSlice({
   reducers: {
     increment: (state, payload) => {
       // state.cart = state.cart + 1
+      // note, the payload is the id of the product
       let productItem = state.cart.find((item) => item.id === payload.payload )
       productItem.cartQuantity +=1
-      console.log(payload);
+      // console.log(payload);
     },
     decrement: (state, action) =>{
         // state.cart = state.cart > 0 ? state.cart - 1 : 0
