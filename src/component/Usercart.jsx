@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement, remove } from '../Redux/counterSlice';
-import cart from '../assets/cart.webp'
+import carty from '../assets/carty.png'
 import { CiCircleRemove } from 'react-icons/ci'
 import Checkout from './Checkout';
 import Shopfooter from './Shopfooter';
@@ -105,8 +105,8 @@ const Usercart = () => {
           </>
         ) : (
           <div className="text-center">
-            <p className="text-xl lg:mt-[19%] mt-[81%] dark:bg-black">Your cart is empty</p>
-            <img src={cart} alt="Empty Cart" className="w-40 h-40 mx-auto mt-6 animate-bounce dark:bg-black" />
+            <p className="text-xl lg:mt-[15%] mt-[64%] dark:bg-black">Your cart is empty</p>
+            <img src={carty} alt="Empty Cart" className="w-60 h-40 mx-auto mt-[86px] animate-bounce dark:bg-black" />
           </div>
         )}
       </div>
