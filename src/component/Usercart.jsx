@@ -105,8 +105,8 @@ const Usercart = () => {
           </>
         ) : (
           <div className="text-center">
-            <p className="text-xl lg:mt-[19%] mt-[81%]">Your cart is empty</p>
-            <img src={cart} alt="Empty Cart" className="w-40 h-40 mx-auto mt-6 animate-bounce" />
+            <p className="text-xl lg:mt-[19%] mt-[81%] dark:bg-black">Your cart is empty</p>
+            <img src={cart} alt="Empty Cart" className="w-40 h-40 mx-auto mt-6 animate-bounce dark:bg-black" />
           </div>
         )}
       </div>
