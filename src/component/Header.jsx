@@ -33,7 +33,7 @@ const Header = () => {
 
     return (
         <div className='p-4 ms-[-15px] flex justify-between  text-pink-600 dark:text-gray-900 bg-white fixed top-0 w-full font-bold font-serif'>
-            <Link to="/" className='flex items-center gap-1'>
+            <Link to="/fashion" className='flex items-center gap-1'>
                 
                 <img src={image7} alt="" className='h-8 w-8 border border-pink-600 dark:border-gray-900 rounded-full' />
                 <span className='font-bold lg:text-xl text-sm'>captain</span>

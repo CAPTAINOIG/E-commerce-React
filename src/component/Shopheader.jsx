@@ -20,7 +20,7 @@ const [cartQuantity, setCartQuantity] = useState("")
 
     return (
         <div className='p-4 z-20 flex justify-between bg-pink-600 text-white fixed top-0 w-full font-bold font-serif'>
-            <Link to="/" className='flex items-center gap-1'>
+            <Link to="/fashion" className='flex items-center gap-1'>
                 <GiCartwheel size={25} className='' />
                 <span className='font-bold text-xl'>captain</span>
                 </Link>

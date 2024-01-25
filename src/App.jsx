@@ -10,6 +10,8 @@ import Shoppingdetail from './component/Shoppingdetail'
 import Usercart from './component/Usercart'
 import Datadetails from './component/Datadetails'
 import Paystack from './component/Paystack'
+import Loader from './component/Loader'
+
 
 
 
@@ -22,7 +24,8 @@ function App() {
     
     
     <Routes>
-    <Route path='/' element={<Datadetails/>}/>
+    <Route path='/' element={<Loader/>}/>
+    <Route path='/fashion' element={<Datadetails/>}/>
     <Route path='/details' element={<Shoppingdetail/>}/>
     <Route path='/cart' element={<Usercart/>}/>
     <Route path='/paystack' element={<Paystack/>}/>
