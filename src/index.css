@@ -27,4 +27,51 @@
 .message.show {
     opacity: 1;
 }
+/* Add these styles to your CSS file */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .page-link:hover {
+    background-color: #eee;
+  }
+  
+  .active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .previous,
+  .next {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .previous:hover,
+  .next:hover {
+    background-color: #eee;
+  }
+  
 

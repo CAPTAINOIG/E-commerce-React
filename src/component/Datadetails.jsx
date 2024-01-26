@@ -7,6 +7,7 @@ const Datadetails = () => {
     <div className='bg-pink-900 dark:bg-gray-900 p-4'>
         <Shop/>
         <Product/>
+        
     </div>
   )
 }

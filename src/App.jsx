@@ -21,22 +21,21 @@ function App() {
 
   return (
     <>
-  
-    
-    
-    <Routes>
-    <Route path='/' element={<Loader/>}/>
-    <Route path='/modal' element={<CustomModal/>}/>
-    <Route path='/fashion' element={<Datadetails/>}/>
-    <Route path='/details' element={<Shoppingdetail/>}/>
-    <Route path='/cart' element={<Usercart/>}/>
-    
-    </Routes>
-    
-   
-   
-    
-    
+
+
+
+      <Routes>
+        <Route path='/' element={<Loader />} />
+        <Route path='/modal' element={<CustomModal />} />
+        <Route path='/fashion' element={<Datadetails />} />
+        <Route path='/details' element={<Shoppingdetail />} />
+        <Route path='/cart' element={<Usercart />} />
+      </Routes>
+
+
+
+
+
     </>
   )
 }

@@ -11,6 +11,7 @@ import Searchinput from './Searchinput';
 import image7 from '../assets/image7.jpg'
 import { useSelector } from 'react-redux';
 
+
 const Header = () => {
     // console.log(userCart);
     const { theme, setTheme } = useContext(AppContext)
@@ -53,8 +54,10 @@ const Header = () => {
                     <Carty/>
                     <span className='text-sm'>{cartQuantity ? cartQuantity : ''}</span>
                 </div>
+           
             </div>
-        </div>
+          
+            </div>
     )
 }
 
