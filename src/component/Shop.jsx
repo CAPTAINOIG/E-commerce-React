@@ -67,8 +67,8 @@ const Shop = () => {
         totalItems={shuffledShopping.length}
       />
     
-      <h1 className='text-center text-2xl my-5 mt-20 text-white font-semibold'>
-        FASHION CATEGORY
+      <h1 className='text-center text-2xl my-5  text-white font-semibold'>
+        SHOPPING CATEGORY
       </h1>
       <div className='grid lg:grid-cols-5 grid-cols-1 gap-4 dark:text-gray-600 text-pink-600 lg:p-0 p-5'>
         {currentItems.map((item, i) => (

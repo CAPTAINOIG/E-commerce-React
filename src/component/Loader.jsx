@@ -24,7 +24,7 @@ const Loader = () => {
           <img id='img'
             src={loaderimage}
             alt="Loading..."
-            style={{ display: 'block', margin: '0 auto', width: '250px', height: '250px', marginTop:'200px', backgroundColor:'red' }}
+            style={{ display: 'block', margin: '0 auto', width: '250px', height: '250px', marginTop:'200px' }}
           />
         </div>
       ) : (
