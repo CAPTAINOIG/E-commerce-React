@@ -7,6 +7,8 @@ import Shopfooter from './Shopfooter';
 import Shopheader from './Shopheader';
 import Swal from 'sweetalert2';
 import carty from '../assets/carty.png';
+import { FaList, FaTh } from 'react-icons/fa';
+
 
 const Usercart = () => {
   const dispatch = useDispatch();
@@ -56,10 +58,13 @@ const Usercart = () => {
           <>
             <Checkout />
             <div className="flex justify-end mb-4">
-              <button onClick={toggleViewMode} className="text-blue-500">
+            <button onClick={toggleViewMode} className="text-blue-500">
+              {viewMode === 'list' ? <FaTh size={20} /> : <FaList size={20} />}
+              <span className="ml-2">
                 {viewMode === 'list' ? 'Switch to Grid View' : 'Switch to List View'}
-              </button>
-            </div>
+              </span>
+            </button>
+          </div>
             <h2 className="text-3xl font-bold mb-4 lg:px-0 px-4">Your Cart ({shoppingCart.length})</h2>
 
             {viewMode === 'list' ? (
