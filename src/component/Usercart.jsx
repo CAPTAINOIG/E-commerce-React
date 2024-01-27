@@ -57,7 +57,7 @@ const Usercart = () => {
         {shoppingCart.length > 0 ? (
           <>
             <Checkout />
-            <div className="flex justify-end mb-4">
+            <div className="flex justify-end mb-4 mt-10">
             <button onClick={toggleViewMode} className="text-blue-500">
               {viewMode === 'list' ? <FaTh size={20} /> : <FaList size={20} />}
               <span className="ml-2">

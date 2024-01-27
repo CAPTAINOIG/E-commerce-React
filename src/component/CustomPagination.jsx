@@ -9,7 +9,7 @@ const CustomPagination = ({ pageCount, onPageChange, currentPage, itemsPerPage, 
     const maxPage = Math.min(currentPage + 5, pageCount);
     for (let i = currentPage; i < maxPage; i++) {
       pageNumbers.push(
-        <li key={i} className={`inline-block mx-1 ${currentPage === i ? 'font-bold' : ''}`}>
+        <li key={i} className={`inline-block mx-1 ${currentPage === i ? 'font-bold bg-primary-600' : ''}`}>
           <button
             className="px-3 py-2 rounded-full focus:outline-none focus:ring focus:border-blue-300 transition-colors duration-300"
             onClick={() => onPageChange({ selected: i })}
