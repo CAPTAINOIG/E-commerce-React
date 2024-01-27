@@ -23,7 +23,7 @@ const Modal = () => {
             Open Modal
           </button>
     
-          {/* Modal component */}
+          {/* Modal componen*/}
           <CustomModal isOpen={isModalOpen} closeModal={closeModal} />
         </div>
       );
