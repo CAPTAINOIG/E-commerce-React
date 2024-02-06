@@ -624,18 +624,6 @@ export const shopping = [
       owner: "CosmicBeats",
       quantity: 0,
     },
-
-
-
-
-
-
-
-
-
-
-
-
     {
       id: 41,
       title: "SNEAKER",

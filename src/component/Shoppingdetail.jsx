@@ -31,6 +31,9 @@ const addCart = () => {
     timer: 1500 // Automatically close after 1.5 seconds
   });
 
+
+
+  //  const productItem = cartProduct.find((item) => item.id === action.payload); 
   const productItem = cartProduct.find((item) => item.id === storage.id);
   if (productItem) {
     dispatch(increment(productItem.id));
@@ -52,6 +55,66 @@ const addCart = () => {
     dispatch(addToCart(newCart));
   }
 };
+
+
+
+// // to save to database
+
+// const addCart = () => {
+//   Swal.fire({
+//     icon: 'success',
+//     title: 'Product added successfully',
+//     showConfirmButton: false,
+//     timer: 1500
+//   });
+
+//   const productItem = cartProduct.find((item) => item.id === storage.id);
+
+//   if (productItem) {
+//     dispatch(increment(productItem.id));
+//   } else {
+//     let newCart = {
+//       owner: storage.owner,
+//       title: storage.title,
+//       id: storage.id,
+//       price: storage.price,
+//       cartQuantity: 1,
+//       photo: storage.photo,
+//       photo2: storage.photo2,
+//       photo3: storage.photo3,
+//       photo4: storage.photo4,
+//       summaries: storage.summaries,
+//       categories: storage.categories,
+//     };
+
+//     // Assuming your backend endpoint for adding to cart is "/api/cart/add"
+//     fetch('/api/cart/add', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(newCart),
+//     })
+//       .then(response => {
+//         if (!response.ok) {
+//           throw new Error('Failed to add product to cart');
+//         }
+//         return response.json();
+//       })
+//       .then(data => {
+//         // Handle success response from the server, if needed
+//         dispatch(addToCart(newCart));
+//       })
+//       .catch(error => {
+//         console.error('Error adding product to cart:', error);
+//         // Handle error, show an alert, or perform other actions
+//       });
+//   }
+// };
+
+
+
+
   const images = [storageData.photo, storageData.photo3, storageData.photo2, storageData.photo4];
   const length = images.length;
 
