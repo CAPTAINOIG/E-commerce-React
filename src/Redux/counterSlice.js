@@ -29,7 +29,7 @@ export const counterSlice = createSlice({
     
     addToCart: (state, payload) =>{
       state.cart.push(payload.payload)
-      localStorage.setItem("cartItems", JSON.stringify(state.cart)) 
+      // localStorage.setItem("cartItems", JSON.stringify(state.cart)) 
   },
   }
 })

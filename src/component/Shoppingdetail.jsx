@@ -10,7 +10,7 @@ import Swal from 'sweetalert2'; // Import SweetAlert
 const Shoppingdetail = () => {
   const dispatch = useDispatch();
   const cartProduct = useSelector((state) => state.counterReducer.cart);
-  // console.log(cartProduct);
+  console.log(cartProduct);
 
   let storage = JSON.parse(localStorage.getItem('productdetail'));
   // console.log(storage);
@@ -34,6 +34,8 @@ const addCart = () => {
 
 
   //  const productItem = cartProduct.find((item) => item.id === action.payload); 
+  // Note, the productitem is not necessary. we are just using it cos of the storage inside local storage.
+  // without it it will work perfectly
   const productItem = cartProduct.find((item) => item.id === storage.id);
   if (productItem) {
     dispatch(increment(productItem.id));
