@@ -25,7 +25,7 @@ const Header = () => {
     
       useEffect(() => {
         const updatedCartQuantity = store.reduce((total, store) => total + store.cartQuantity, 0);
-        console.log(updatedCartQuantity);
+        // console.log(updatedCartQuantity);
         setCartQuantity(updatedCartQuantity)
     }, [store]);
    

@@ -68,18 +68,20 @@ const Usercart = () => {
             <h2 className="text-3xl font-bold mb-4 lg:px-0 px-4">Your Cart ({shoppingCart.length})</h2>
 
             {viewMode === 'list' ? (
-              <ul className="space-y-6">
+              <ul className="space-y-6 ">
               {shoppingCart.map((item, index) => (
-                <li key={index} className="border relative rounded-lg overflow-hidden shadow-lg">
-                  <img src={item.photo} alt={item.title} className="w-full h-48 object-cover" />
-                  <div className="p-4">
+                <li key={index} className="lg:mx-auto flex lg:w-[70%] lg:px-48 border relative rounded-lg overflow-hidden shadow-lg">
+                <div className='p-4 lg:w-[50%] w-[50%]'>
+                <img src={item.photo} alt={item.title} className="w-full h-48 object-cover" />
+                </div>
+                  <div className="p-4 lg:ms-20">
                     <h1 className="text-xl font-semibold mb-2">{item.title}</h1>
                     <p className="text-green-600 font-semibold">Price: ${item.price}</p>
                     <p> ${item.price} * {item.cartQuantity} items</p>
                     <div className='flex'>
                       <p>Subtotal: ${item.price * item.cartQuantity}</p>
                       <button onClick={() => handleRemove(index)} className="rounded-md">
-                        <CiCircleRemove size={30} className='absolute lg:mt-[-105%] lg:ms-[48%] mt-[-90%] ms-[54%] text-white bg-red-500 rounded-full font-bolder' />
+                        <CiCircleRemove size={30} className='absolute lg:mt-[-13%] lg:ms-[24%] mt-[-30%] ms-[8%] text-white bg-red-500 rounded-full font-bolder' />
                       </button>
                     </div>
                     <div className="flex justify-between mt-4">
