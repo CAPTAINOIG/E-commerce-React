@@ -59,7 +59,7 @@ const Shop = () => {
     <>
       <Header />
       {/* Search Input */}
-      <input className='mt-[8%] lg:ms-[35%] w-[30%] ms-2 border border-gray-300 rounded-s-sm px-2 py-1 text-black focus:outline-pink-500 focus:border-pink-500'
+      <input className='lg:mt-[8%] mt-[20%] w-[100%] lg:ms-[35%] lg:w-[30%] lg:mb-0 mb-10 border border-gray-300 rounded-s-sm px-2 py-1 text-black focus:outline-pink-500 focus:border-pink-500'
         type="text"
         placeholder="Search products..."
         value={searchQuery}
