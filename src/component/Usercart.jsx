@@ -15,16 +15,16 @@ const Usercart = () => {
   const shoppingCart = useSelector((state) => state.counterReducer.cart);
   const [message, setMessage] = useState('');
   const [viewMode, setViewMode] = useState('list'); // 'list' or 'grid'
-  const [isDisabled, setIsDisabled] = useState(false)
+  const [isDisabled, setIsDisabled] = useState("")
 
   const handleIncrement = (item) => {
     if (item.availableQuantity > item.cartQuantity) {
       dispatch(increment(item.id));
+      setIsDisabled(item.cartQuantity);
       // console.log(item.cartQuantity);
-      // setisDisabbled(item.cartQuantity)
+      
     } else {
-      setIsDisabled(true);
-      console.log('err');
+      // console.log('err');
     }
   };
 
@@ -97,7 +97,7 @@ const Usercart = () => {
                         <button
                           onClick={() => handleIncrement(item)}
                           className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2"
-                          disabled={isDisabled} // Disable the button if isDisabled is true
+                          
                         >
                           +
                         </button>

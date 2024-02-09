@@ -55,7 +55,7 @@ const addCart = () => {
       summaries: storage.summaries,
       categories: storage.categories,
     };
-    console.log(newCart);
+    // console.log(newCart);
     dispatch(addToCart(newCart));
   }
 };
