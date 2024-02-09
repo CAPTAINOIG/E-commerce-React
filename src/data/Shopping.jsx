@@ -16,7 +16,6 @@ export const shopping = [
       categories: "SNEAKER COMPANY",
     owner: "SNEAKER COMPANY",
     quantity: 7,
-    
   },
   {
     id: 2,
@@ -34,7 +33,7 @@ export const shopping = [
       "Elevate your style with our premium clothing. Crafted for comfort and designed to stand out.",
     categories: "FASHION",
     owner: "unsplash",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 3,
@@ -53,7 +52,7 @@ export const shopping = [
     categories: "SPORTS & OUTDOORS",
     // music: "/music/Westlife_Fool again.mp3",
     owner: "ADIDAS",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 4,
@@ -71,7 +70,7 @@ export const shopping = [
       "It captures the essence of the product, highlighting its digital representation and connection to a renowned masterpiece.",
     categories: "FASHION",
     owner: "unsplash",
-    quantity: 0,
+    quantity: 5,
   },
 
 
@@ -92,7 +91,7 @@ export const shopping = [
       "Crafted with premium quality denim, this wardrobe staple exudes versatility and effortless charm.",
     categories: "DENIM",
     owner: "unsplash",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 6,
@@ -110,7 +109,7 @@ export const shopping = [
       "elegance, craftsmanship, and functionality of a wristwatch, emphasizing its refined design, versatility, and the ability to enhance any ensemble.",
     categories: "FASHION",
     owner: "unsplash",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 7,
@@ -128,7 +127,7 @@ export const shopping = [
       "Elevate your style with our classic face cap, crafted for comfort and effortless charm. Made with premium materials and designed for everyday wear, this cap embodies casual sophistication.",
     categories: "FASHION",
     owner: "unsplash",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 8,
@@ -146,7 +145,7 @@ export const shopping = [
       "innovation and convenience combined. Explore cutting-edge technology and sleek design, offering a powerful and user-friendly experience",
     categories: "ANDROID",
     owner: "ANDROID",
-    quantity: 0,
+    quantity: 5,
   },
 
 
@@ -168,7 +167,7 @@ export const shopping = [
       "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
     categories: "FASHION",
     owner: "unsplash",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 10,
@@ -186,7 +185,7 @@ export const shopping = [
       "Power meets portability in our laptop. Designed for efficiency and style, it offers robust performance and versatility. Ideal for work or entertainment, experience reliability in a sleek package.",
     categories: "TECH",
     owner: "unsplash",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 11,
@@ -205,7 +204,7 @@ export const shopping = [
     categories: "SPRAY",
     music: "/music/Westlife_Fool again.mp3",
     owner: "Westlife",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 12,
@@ -223,13 +222,8 @@ export const shopping = [
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
     categories: "OASIS",
     owner: "Risidio",
-    quantity: 0,
+    quantity: 5,
   },
-
-
-
-
-
   {
     id: 13,
     title: "UPS",
@@ -246,7 +240,7 @@ export const shopping = [
       "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
     categories: "TECH",
     owner: "Risidio",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 14,
@@ -264,7 +258,7 @@ export const shopping = [
       "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
     categories: "POWER BANK",
     owner: "Risidio",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 15,
@@ -283,7 +277,7 @@ export const shopping = [
     categories: "Music",
     music: "/music/Westlife_Fool again.mp3",
     owner: "Westlife",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 16,
@@ -301,13 +295,8 @@ export const shopping = [
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
     categories: "FREEZER",
     owner: "Risidio",
-    quantity: 0,
+    quantity: 5,
   },
-
-
-
-
-
   {
     id: 17,
     title: "BOOMLAND - SHARDS",
@@ -324,7 +313,7 @@ export const shopping = [
       "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
     categories: "FASHION",
     owner: "Risidio",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 18,
@@ -342,7 +331,7 @@ export const shopping = [
       "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
     categories: "FASHION",
     owner: "Risidio",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 19,
@@ -361,7 +350,7 @@ export const shopping = [
     categories: "FASHION",
     music: "/music/Westlife_Fool again.mp3",
     owner: "Westlife",
-    quantity: 0,
+    quantity: 5,
   },
   {
     id: 20,
@@ -379,12 +368,8 @@ export const shopping = [
       "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
     categories: "CHOP",
     owner: "Risidio",
-    quantity: 0,
+    quantity: 5,
   },
-
-
-
-  
     {
       id: 21,
       title: "BoomLand - Shards",
@@ -395,7 +380,7 @@ export const shopping = [
         "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
       categories: "Gaming",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 22,
@@ -407,7 +392,7 @@ export const shopping = [
         "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
       categories: "Art",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 23,
@@ -420,7 +405,7 @@ export const shopping = [
       categories: "Music",
       music: "/music/Westlife_Fool again.mp3",
       owner: "Westlife",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 24,
@@ -432,7 +417,7 @@ export const shopping = [
         "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
       categories: "Art",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 25,
@@ -444,7 +429,7 @@ export const shopping = [
         "Metaverse HQ - where Picasso's powerful statement comes to life in the form of NFT art. Dive into the metaverse.",
       categories: "Art",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 26,
@@ -456,7 +441,7 @@ export const shopping = [
         "Rare Pepe - Botticelli's Venus takes on a new form in the digital realm. A rare masterpiece for collectors.",
       categories: "SportLight",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 27,
@@ -468,7 +453,7 @@ export const shopping = [
       categories: "Music",
       music: "/music/Davido_-_Feel.mp3",
       owner: "Davido",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 28,
@@ -481,7 +466,7 @@ export const shopping = [
       categories: "Music",
       music: "/music/Asa-Ft.-Wizkid-IDG.mp3",
       owner: "ComposerX",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 29,
@@ -493,7 +478,7 @@ export const shopping = [
         "Step into the futuristic cityscape of Neo Tokyo Dreams. A digital masterpiece for cyberpunk enthusiasts.",
       categories: "Art",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 30,
@@ -506,7 +491,7 @@ export const shopping = [
       categories: "Music",
       music: "/music/Mohbad_-_Peace.mp3",
       owner: "QuantumSound",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 31,
@@ -519,7 +504,7 @@ export const shopping = [
       categories: "Music",
       music: "/music/Omah-Lay-Justin-Bieber-–-Attention.mp3",
       owner: "SoundSculptor",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 32,
@@ -530,7 +515,7 @@ export const shopping = [
         "Abstract Echoes - A visual and auditory exploration of abstract concepts. A feast for the senses.",
       categories: "Abstract",
       owner: "VisionaryArt",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 33,
@@ -541,7 +526,7 @@ export const shopping = [
         "Unleash the magical essence of Arcane Alchemy. An enchanting blend of art and mysticism.",
       categories: "Mystic",
       owner: "MysticArtisan",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 34,
@@ -552,7 +537,7 @@ export const shopping = [
         "Experience the world through Vibrant Visions. A colorful array of digital artistry.",
       categories: "Colorful",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 35,
@@ -564,7 +549,7 @@ export const shopping = [
         "Embark on an Epic Odyssey through digital realms. A journey of visual and auditory delights.",
       categories: "Adventure",
       owner: "DigitalExplorer",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 36,
@@ -575,7 +560,7 @@ export const shopping = [
         "Indulge in the heavenly sounds of Celestial Serenade. A musical experience like no other.",
       categories: "Heavenly",
       owner: "HarmonyMaster",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 37,
@@ -587,7 +572,7 @@ export const shopping = [
         "Witness the fusion of art and sound with Sculpted Soundwaves. A masterpiece for audiophiles.",
       categories: "Sculpture",
       owner: "AudioSculptor",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 38,
@@ -598,7 +583,7 @@ export const shopping = [
         "Dive into the Quantum Canvas, where digital artistry meets the principles of quantum reality.",
       categories: "Quantum",
       owner: "QuantumArtisan",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 39,
@@ -610,7 +595,7 @@ export const shopping = [
         "Experience the merging of past and future in Futuristic Fusion. A visual and auditory delight.",
       categories: "Futuristic",
       owner: "TimeTraveler",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 40,
@@ -622,7 +607,7 @@ export const shopping = [
         "Immerse yourself in the otherworldly sounds of Galactic Grooves. A cosmic journey of beats and melodies.",
       categories: "Cosmic",
       owner: "CosmicBeats",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 41,
@@ -659,7 +644,7 @@ export const shopping = [
         "Elevate your style with our premium clothing. Crafted for comfort and designed to stand out.",
       categories: "FASHION",
       owner: "unsplash",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 43,
@@ -678,7 +663,7 @@ export const shopping = [
       categories: "SPORTS & OUTDOORS",
       // music: "/music/Westlife_Fool again.mp3",
       owner: "ADIDAS",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 44,
@@ -696,11 +681,8 @@ export const shopping = [
         "It captures the essence of the product, highlighting its digital representation and connection to a renowned masterpiece.",
       categories: "FASHION",
       owner: "unsplash",
-      quantity: 0,
+      quantity: 5,
     },
-  
-  
-  
     {
       id: 45,
       title: "DENIM JACKET",
@@ -717,7 +699,7 @@ export const shopping = [
         "Crafted with premium quality denim, this wardrobe staple exudes versatility and effortless charm.",
       categories: "DENIM",
       owner: "unsplash",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 46,
@@ -735,7 +717,7 @@ export const shopping = [
         "elegance, craftsmanship, and functionality of a wristwatch, emphasizing its refined design, versatility, and the ability to enhance any ensemble.",
       categories: "FASHION",
       owner: "unsplash",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 47,
@@ -753,7 +735,7 @@ export const shopping = [
         "Elevate your style with our classic face cap, crafted for comfort and effortless charm. Made with premium materials and designed for everyday wear, this cap embodies casual sophistication.",
       categories: "FASHION",
       owner: "unsplash",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 48,
@@ -771,12 +753,8 @@ export const shopping = [
         "innovation and convenience combined. Explore cutting-edge technology and sleek design, offering a powerful and user-friendly experience",
       categories: "ANDROID",
       owner: "ANDROID",
-      quantity: 0,
+      quantity: 5,
     },
-  
-  
-  
-  
     {
       id: 49,
       title: "SHIRT",
@@ -793,7 +771,7 @@ export const shopping = [
         "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
       categories: "FASHION",
       owner: "unsplash",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 50,
@@ -811,7 +789,7 @@ export const shopping = [
         "Power meets portability in our laptop. Designed for efficiency and style, it offers robust performance and versatility. Ideal for work or entertainment, experience reliability in a sleek package.",
       categories: "TECH",
       owner: "unsplash",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 51,
@@ -830,7 +808,7 @@ export const shopping = [
       categories: "SPRAY",
       music: "/music/Westlife_Fool again.mp3",
       owner: "Westlife",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 52,
@@ -848,13 +826,8 @@ export const shopping = [
         "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
       categories: "OASIS",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
-  
-  
-  
-  
-  
     {
       id: 53,
       title: "UPS",
@@ -871,7 +844,7 @@ export const shopping = [
         "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
       categories: "TECH",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 54,
@@ -889,7 +862,7 @@ export const shopping = [
         "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
       categories: "POWER BANK",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 55,
@@ -908,7 +881,7 @@ export const shopping = [
       categories: "Music",
       music: "/music/Westlife_Fool again.mp3",
       owner: "Westlife",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 56,
@@ -926,13 +899,8 @@ export const shopping = [
         "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
       categories: "FREEZER",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
-  
-  
-  
-  
-  
     {
       id: 57,
       title: "BOOMLAND - SHARDS",
@@ -949,7 +917,7 @@ export const shopping = [
         "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
       categories: "FASHION",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 58,
@@ -967,7 +935,7 @@ export const shopping = [
         "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
       categories: "FASHION",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 59,
@@ -986,7 +954,7 @@ export const shopping = [
       categories: "FASHION",
       music: "/music/Westlife_Fool again.mp3",
       owner: "Westlife",
-      quantity: 0,
+      quantity: 5,
     },
     {
       id: 60,
@@ -1004,7 +972,7 @@ export const shopping = [
         "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
       categories: "CHOP",
       owner: "Risidio",
-      quantity: 0,
+      quantity: 5,
     },
   
   
@@ -1020,7 +988,7 @@ export const shopping = [
           "Step into the futuristic world of BoomLand. Explore its stunning shards and own a piece of this digital masterpiece.",
         categories: "Gaming",
         owner: "Risidio",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 62,
@@ -1032,7 +1000,7 @@ export const shopping = [
           "Experience the enchanting Pixelmon Generation, where art and imagination collide in the most surreal way.",
         categories: "Art",
         owner: "Risidio",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 63,
@@ -1045,7 +1013,7 @@ export const shopping = [
         categories: "Music",
         music: "/music/Westlife_Fool again.mp3",
         owner: "Westlife",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 64,
@@ -1057,7 +1025,7 @@ export const shopping = [
           "Pi Oasis - a digital representation of a world-famous scream. Own this iconic artwork in the digital realm.",
         categories: "Art",
         owner: "Risidio",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 65,
@@ -1069,7 +1037,7 @@ export const shopping = [
           "Metaverse HQ - where Picasso's powerful statement comes to life in the form of NFT art. Dive into the metaverse.",
         categories: "Art",
         owner: "Risidio",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 66,
@@ -1081,7 +1049,7 @@ export const shopping = [
           "Rare Pepe - Botticelli's Venus takes on a new form in the digital realm. A rare masterpiece for collectors.",
         categories: "SportLight",
         owner: "Risidio",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 67,
@@ -1093,7 +1061,7 @@ export const shopping = [
         categories: "Music",
         music: "/music/Davido_-_Feel.mp3",
         owner: "Davido",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 68,
@@ -1106,7 +1074,7 @@ export const shopping = [
         categories: "Music",
         music: "/music/Asa-Ft.-Wizkid-IDG.mp3",
         owner: "ComposerX",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 69,
@@ -1118,7 +1086,7 @@ export const shopping = [
           "Step into the futuristic cityscape of Neo Tokyo Dreams. A digital masterpiece for cyberpunk enthusiasts.",
         categories: "Art",
         owner: "Risidio",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 70,
@@ -1131,7 +1099,7 @@ export const shopping = [
         categories: "Music",
         music: "/music/Mohbad_-_Peace.mp3",
         owner: "QuantumSound",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 71,
@@ -1144,7 +1112,7 @@ export const shopping = [
         categories: "Music",
         music: "/music/Omah-Lay-Justin-Bieber-–-Attention.mp3",
         owner: "SoundSculptor",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 72,
@@ -1155,7 +1123,7 @@ export const shopping = [
           "Abstract Echoes - A visual and auditory exploration of abstract concepts. A feast for the senses.",
         categories: "Abstract",
         owner: "VisionaryArt",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 73,
@@ -1166,7 +1134,7 @@ export const shopping = [
           "Unleash the magical essence of Arcane Alchemy. An enchanting blend of art and mysticism.",
         categories: "Mystic",
         owner: "MysticArtisan",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 74,
@@ -1177,7 +1145,7 @@ export const shopping = [
           "Experience the world through Vibrant Visions. A colorful array of digital artistry.",
         categories: "Colorful",
         owner: "Risidio",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 75,
@@ -1189,7 +1157,7 @@ export const shopping = [
           "Embark on an Epic Odyssey through digital realms. A journey of visual and auditory delights.",
         categories: "Adventure",
         owner: "DigitalExplorer",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 76,
@@ -1200,7 +1168,7 @@ export const shopping = [
           "Indulge in the heavenly sounds of Celestial Serenade. A musical experience like no other.",
         categories: "Heavenly",
         owner: "HarmonyMaster",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 77,
@@ -1212,7 +1180,7 @@ export const shopping = [
           "Witness the fusion of art and sound with Sculpted Soundwaves. A masterpiece for audiophiles.",
         categories: "Sculpture",
         owner: "AudioSculptor",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 78,
@@ -1223,7 +1191,7 @@ export const shopping = [
           "Dive into the Quantum Canvas, where digital artistry meets the principles of quantum reality.",
         categories: "Quantum",
         owner: "QuantumArtisan",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 79,
@@ -1235,7 +1203,7 @@ export const shopping = [
           "Experience the merging of past and future in Futuristic Fusion. A visual and auditory delight.",
         categories: "Futuristic",
         owner: "TimeTraveler",
-        quantity: 0,
+        quantity: 5,
       },
       {
         id: 80,
@@ -1247,7 +1215,7 @@ export const shopping = [
           "Immerse yourself in the otherworldly sounds of Galactic Grooves. A cosmic journey of beats and melodies.",
         categories: "Cosmic",
         owner: "CosmicBeats",
-        quantity: 0,
+        quantity: 5,
       },
   ];
   

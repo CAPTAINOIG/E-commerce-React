@@ -10,7 +10,7 @@ import Swal from 'sweetalert2'; // Import SweetAlert
 const Shoppingdetail = () => {
   const dispatch = useDispatch();
   const cartProduct = useSelector((state) => state.counterReducer.cart);
-  console.log(cartProduct);
+  // console.log(cartProduct);
 
   let storage = JSON.parse(localStorage.getItem('productdetail'));
   // console.log(storage);
@@ -47,6 +47,7 @@ const addCart = () => {
       id: storage.id,
       price: storage.price,
       cartQuantity: 1,
+      availableQuantity:storage.quantity,
       photo: storage.photo,
       photo2: storage.photo2,
       photo3: storage.photo3,
@@ -54,6 +55,7 @@ const addCart = () => {
       summaries: storage.summaries,
       categories: storage.categories,
     };
+    console.log(newCart);
     dispatch(addToCart(newCart));
   }
 };
