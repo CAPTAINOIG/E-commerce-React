@@ -59,7 +59,7 @@ const Shop = () => {
     <>
       <Header />
       {/* Search Input */}
-      <input className='lg:mt-[8%] mt-[20%] w-[100%] lg:ms-[35%] lg:w-[30%] lg:mb-0 mb-10 border border-gray-300 rounded-s-sm px-2 py-1 text-black focus:outline-pink-500 focus:border-pink-500'
+      <input className='lg:mt-[8%] mt-[20%] w-[100%] lg:ms-[35%] lg:w-[30%] md:w-[70%] md:ms-[15%] md:mt-[10%] lg:mb-0 mb-10 border border-gray-300 rounded-s-sm px-2 py-1 text-black focus:outline-pink-500 focus:border-pink-500'
         type="text"
         placeholder="Search products..."
         value={searchQuery}
@@ -80,7 +80,7 @@ const Shop = () => {
         {currentItems.length == 0 ? '' : 'SHOPPING CATEGORY'}
 
       </h1>
-      <div className='grid lg:grid-cols-5 grid-cols-1 gap-4 dark:text-gray-600 text-pink-600 lg:p-0 p-5'>
+      <div className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-4 dark:text-gray-600 text-pink-600 lg:p-0 p-5'>
         {currentItems.length == 0 ? (
           <div className="text-white text-xl text-center">
             Sorry, we couldn't find any results

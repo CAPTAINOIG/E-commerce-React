@@ -15,15 +15,15 @@ const Usercart = () => {
   const shoppingCart = useSelector((state) => state.counterReducer.cart);
   const [message, setMessage] = useState('');
   const [viewMode, setViewMode] = useState('list'); // 'list' or 'grid'
-  const [isDisabled, setIsDisabled] = useState("")
+  // const [isDisabled, setIsDisabled] = useState(false)
 
   const handleIncrement = (item) => {
     if (item.availableQuantity > item.cartQuantity) {
       dispatch(increment(item.id));
-      setIsDisabled(item.cartQuantity);
       // console.log(item.cartQuantity);
-      
+      // setisDisabbled(item.cartQuantity)
     } else {
+      // setIsDisabled(true);
       // console.log('err');
     }
   };
@@ -86,6 +86,7 @@ const Usercart = () => {
                     <div className="p-4 lg:ms-20">
                       <h1 className="text-xl font-semibold mb-2">{item.title}</h1>
                       <p className="text-green-600 font-semibold">Price: ${item.price}</p>
+                      <p className="text-green-600 font-semibold">Available:{item.availableQuantity}</p>
                       <p> ${item.price} * {item.cartQuantity} items</p>
                       <div className='flex'>
                         <p>Subtotal: ${item.price * item.cartQuantity}</p>
@@ -97,7 +98,6 @@ const Usercart = () => {
                         <button
                           onClick={() => handleIncrement(item)}
                           className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2"
-                          
                         >
                           +
                         </button>
@@ -116,6 +116,7 @@ const Usercart = () => {
                     <div className="p-4">
                       <h1 className="text-xl font-semibold mb-2">{item.title}</h1>
                       <p className="text-green-600 font-semibold">Price: ${item.price}</p>
+                      <p className="text-green-600 font-semibold">Available:{item.availableQuantity}</p>
                       <p> ${item.price} * {item.cartQuantity} items</p>
                       <div className='flex'>
                         <p>Subtotal: ${item.price * item.cartQuantity}</p>
