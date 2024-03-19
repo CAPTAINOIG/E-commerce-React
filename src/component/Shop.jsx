@@ -3,10 +3,13 @@ import { shopping } from '../data/Shopping';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import CustomPagination from './CustomPagination';
+// import SortComponent from './SortComponent';
+
 
 const Shop = () => {
   let navigate = useNavigate();
   const [shuffledShopping, setShuffledShopping] = useState([]);
+  const [sortBy, setSortBy] = useState('price');
   const [currentPage, setCurrentPage] = useState(0); // Keep track of the current page
   const [searchQuery, setSearchQuery] = useState(''); // State to manage search query
   const itemsPerPage = 10; // Number of items per page
@@ -82,7 +85,7 @@ const Shop = () => {
       </h1>
       <div className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-4 dark:text-gray-600 text-pink-600 lg:p-0 p-5'>
         {currentItems.length == 0 ? (
-          <div className="text-white text-xl text-center">
+          <div className="text-white text-xl lg:w-[500px] lg:ms-[450px] lg:mb-[150px]">
             Sorry, we couldn't find any results
           </div>
         ) : (

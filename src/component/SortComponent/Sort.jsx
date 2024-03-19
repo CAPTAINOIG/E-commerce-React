@@ -1,20 +1,20 @@
 // Sort.js
 import React, { useState } from "react";
 import SortByCategories from "./SortByCategories";
-import SortByPrices from "./SortByPrices";
-import SortByNames from "./SortByNames";
+// import SortByPrices from "./SortByPrices";
+// import SortByNames from "./SortByNames";
 import { shopping } from "../../data/Shopping";
-import SortMenu from "./SortMenu";
+// import SortMenu from "./SortMenu";
 // ... other imports
 
 const Sort = ({
   
-    // collection,
-    // setSelectedCategory,
-    // currentPageItem,
-    // setCurrentPageItem,
+    collection,
+    setSelectedCategory,
+    currentPageItem,
+    setCurrentPageItem,
     // isSmallScreen,
-    // selectedCategory
+    selectedCategory
 }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [currentPageItem, setCurrentPageItem] = useState([]);
@@ -32,7 +32,7 @@ const Sort = ({
         currentPageItem={currentPageItem}
         selectedCategory={selectedCategory}
         />
-   <SortByNames
+   {/* <SortByNames
    setCurrentPageItem={setCurrentPageItem}
         setSelectedCategory={setSelectedCategory}
         collection={shopping}
@@ -50,7 +50,7 @@ const Sort = ({
             setSelectedPriceRange={setSelectedPriceRange}
             shopping={shopping}
             selectedPriceRange={selectedPriceRange}
-          />
+          /> */}
         {/* ... other sorting components */}
       </section>
     </>
