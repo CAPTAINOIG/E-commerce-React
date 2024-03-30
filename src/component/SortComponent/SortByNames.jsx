@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 import { shopping } from "../../data/Shopping";
-import { useNavigate } from "react-router-dom";
 
-const SortByNames = () => {
-  let navigate = useNavigate();
-  const [selectedName, setSelectedName] = useState('');
-  const [currentPageItem, setCurrentPageItem] = useState([]);
+const SortByNames = ({ setCurrentItems, shuffledShopping }) => {
+  const [selectedName, setSelectedName] = useState(""); // State for selected name
 
-  const filterCollectionByName = (selectedName) => {
-    setSelectedName(selectedName);
-    const filtered = shopping.filter((item) => item.title === selectedName);
-    setCurrentPageItem(filtered);
-    console.log(filtered);
-    
-    // Navigate to details page when an option is selected
-    navigate('/details');
-    localStorage.setItem('productdetail', JSON.stringify(filtered[0])); // Assuming filtered has at most one item
+  // Filter products by name
+
+
+  const filterCollectionByName = (name) => {
+    setSelectedName(name);
+    const filtered = shuffledShopping.filter(
+      (item) => name === "all" || item.title === name
+    );
+    setCurrentItems(filtered);
   };
 
   return (
@@ -27,11 +24,9 @@ const SortByNames = () => {
           onChange={(e) => filterCollectionByName(e.target.value)}
           className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border focus:bg-black"
         >
+          
           {shopping.map((item, index) => (
-            <option
-              key={item.title} // Use a unique key, assuming item.title is unique
-              value={item.title}
-            >
+            <option key={index} value={item.title}>
               {item.title}
             </option>
           ))}

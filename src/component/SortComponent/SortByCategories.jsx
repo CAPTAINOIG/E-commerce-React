@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { shopping } from "../../data/Shopping";
 
-const SortByCategories = () => {
+const SortByCategories = ({ setCurrentItems, shuffledShopping }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
-  const [currentPageItem, setCurrentPageItem] = useState([]);
+  const  [currentPage, setCurrentPage]   = useState([]);
 
   const uniqueCategories = [...new Set(shopping.map((item) => item.categories))];
 
@@ -11,10 +11,10 @@ const SortByCategories = () => {
     setSelectedCategory(category);
 
     if (category === "all") {
-      setCurrentPageItem(shopping);
+      setCurrentPage(shopping);
     } else {
-      const filtered = shopping.filter((item) => item.categories === category);
-      setCurrentPageItem(filtered);
+      const filtered = shuffledShopping.filter((item) => item.categories === category);
+      setCurrentItems(filtered);
       console.log(filtered);
     }
   };
@@ -28,30 +28,13 @@ const SortByCategories = () => {
           onChange={(e) => filterCollection(e.target.value)}
           className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border focus:bg-black"
         >
-          <option key="all" value="all">
-            All
-          </option>
+          
           {uniqueCategories.map((category) => (
             <option key={category} value={category}>
               {category}
             </option>
           ))}
         </select>
-      </div>
-
-      {/* Display the items based on the selected category */}
-      <div className="item-container">
-        {currentPageItem.length > 0 ? (
-          currentPageItem.map((item) => (
-            <div key={item.id} className="item">
-              {/* Display your item details here */}
-              <p>{item.title}</p>
-              {/* Add other item details as needed */}
-            </div>
-          ))
-        ) : (
-          <p>No items found for the selected category.</p>
-        )}
       </div>
     </>
   );
