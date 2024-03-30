@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { shopping } from "../../data/Shopping";
 
-const SortByCategories = ({ setCurrentItems, shuffledShopping }) => {
+const SortByCategories = ({setCurrentItems, shuffledShopping}) => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const  [currentPage, setCurrentPage]   = useState([]);
 
@@ -28,7 +28,7 @@ const SortByCategories = ({ setCurrentItems, shuffledShopping }) => {
           onChange={(e) => filterCollection(e.target.value)}
           className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border focus:bg-black"
         >
-          
+        
           {uniqueCategories.map((category) => (
             <option key={category} value={category}>
               {category}
