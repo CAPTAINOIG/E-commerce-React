@@ -103,8 +103,5 @@ const Shop = () => {
   );
 }
 
-<<<<<<< HEAD
 export default Shop
-=======
-export default Shop
->>>>>>> d1d79d190c2617c3ac2a84ca27a2cb0ef224a651
+
