@@ -1217,6 +1217,396 @@ export const shopping = [
         owner: "CosmicBeats",
         quantity: 5,
       },
+
+
+
+      {
+        id: 81,
+        title: "Vivid Voyage",
+        photo: "https://source.unsplash.com/600x400/?vivid-voyage",
+        price: "120.00",
+        summaries:
+          "Embark on a visually stunning journey through the vibrant realms of Vivid Voyage.",
+        categories: "Adventure",
+        owner: "VisualExplorer",
+        quantity: 10,
+      },
+    
+     
+      {
+        id: 82,
+        title: "Astral Atelier",
+        photo: "https://source.unsplash.com/600x400/?astral-atelier",
+        price: "100.00",
+        summaries:
+          "Unleash your creativity in the ethereal workshop of Astral Atelier.",
+        categories: "Art",
+        owner: "ArtisanDreamer",
+        quantity: 10,
+      },
+    
+    
+      {
+        id: 83,
+        title: "Lunar Lullaby",
+        photo: "https://source.unsplash.com/600x400/?lunar-lullaby",
+        price: "75.00",
+        summaries:
+          "Let the soothing Lunar Lullaby serenade you into a dreamy night.",
+        categories: "Music",
+        music: "/music/Lunar_Lullaby.mp3",
+        owner: "MoonMelodies",
+        quantity: 10,
+      },
+    
+    
+      {
+        id: 84,
+        title: "Quantum Quiver",
+        photo: "https://source.unsplash.com/600x400/?quantum-quiver",
+        price: "125.00",
+        summaries:
+          "Feel the pulse of quantum energy with the mesmerizing Quantum Quiver.",
+        categories: "Quantum",
+        owner: "QuantumExplorer",
+        quantity: 10,
+      },
+    
+      
+      {
+        id: 85,
+        title: "Synthwave Symphony",
+        photo: "https://source.unsplash.com/600x400/?synthwave-symphony",
+        price: "110.00",
+        summaries:
+          "Immerse yourself in the retro-futuristic vibes of Synthwave Symphony.",
+        categories: "Music",
+        music: "/music/Synthwave_Symphony.mp3",
+        owner: "RetroMaestro",
+        quantity: 10,
+      },
+    
+    
+      {
+        id: 86,
+        title: "Celestial Cascade",
+        photo: "https://www.w3schools.com/w3images/nature.jpg",
+        price: "140.00",
+        summaries:
+          "Witness the cosmic beauty of Celestial Cascade, where stars dance in harmony.",
+        categories: "Space",
+        owner: "StellarSculptor",
+        quantity: 10,
+      },
+    
+   
+      {
+        id: 87,
+        title: "Cybernetic Symphony",
+        photo: "https://www.w3schools.com/w3images/mountains.jpg",
+        price: "160.00",
+        summaries:
+          "Merge with the harmonies of the future with the Cybernetic Symphony.",
+        categories: "Futuristic",
+        owner: "CyberComposer",
+        quantity: 10,
+      },
+    
+      {
+        id: 88,
+        title: "Digital Dunes",
+        photo: "https://www.w3schools.com/w3images/ocean.jpg",
+        price: "90.00",
+        summaries:
+          "Experience the mesmerizing waves of the Digital Dunes in this digital oasis.",
+        categories: "Digital",
+        owner: "PixelExplorer",
+        quantity: 10,
+      },
+    
+      
+      {
+        id: 89,
+        title: "Mystic Mosaic",
+        photo: "https://www.w3schools.com/w3images/forest.jpg",
+        price: "110.00",
+        summaries:
+          "Delve into the mystical patterns of the Mystic Mosaic, a visual enchantment.",
+        categories: "Mystic",
+        owner: "MosaicMaestro",
+        quantity: 10,
+      },
+    
+    
+      {
+        id: 90,
+        title: "Epic Equinox",
+        photo: "https://www.w3schools.com/w3images/rock.jpg",
+        price: "200.00",
+        summaries:
+          "Celebrate the epic balance of day and night with the breathtaking Epic Equinox.",
+        categories: "Adventure",
+        owner: "EquinoxExplorer",
+        quantity: 7,
+      },
+    
+     
+      {
+        id: 91,
+        title: "Sonic Sunrise",
+        photo: "https://www.w3schools.com/w3images/underwater.jpg",
+        price: "120.00",
+        summaries:
+          "Ride the sonic waves of a digital sunrise with this mesmerizing NFT art.",
+        categories: "Music",
+        music: "/music/Sonic_Sunrise.mp3",
+        owner: "SunriseSonic",
+        quantity: 10,
+      },
+    
+      
+      {
+        id: 92,
+        title: "Dreamy Datastream",
+        photo: "https://www.w3schools.com/w3images/skies.jpg",
+        price: "95.00",
+        summaries:
+          "Navigate through the dreamy currents of the digital realm with Datastream Dreams.",
+        categories: "Digital",
+        owner: "DataDreamer",
+        quantity: 6,
+      },
+    
+      {
+        id: 93,
+        title: "Luminescent Labyrinth",
+        photo: "https://www.w3schools.com/w3images/city.jpg",
+        price: "150.00",
+        summaries:
+          "Get lost in the mesmerizing glow of the Luminescent Labyrinth, a journey of light.",
+        categories: "Surreal",
+        owner: "LuminousDreams",
+        quantity: 5,
+      },
+    
+     
+      {
+        id: 94,
+        title: "Synthetic Stardust",
+        photo: "https://www.w3schools.com/w3images/mist.jpg",
+        price: "85.00",
+        summaries:
+          "Witness the celestial spectacle of Synthetic Stardust, where pixels become stars.",
+        categories: "Digital",
+        owner: "PixelStardust",
+        quantity: 6,
+      },
+    
+    
+      {
+        id: 95,
+        title: "Vortex Voyage",
+        photo: "https://www.w3schools.com/w3images/snow.jpg",
+        price: "130.00",
+        summaries:
+          "Embark on a visual journey through the cosmic whirlpool of Vortex Voyage.",
+        categories: "Cosmic",
+        owner: "VortexExplorer",
+        quantity: 6,
+      },
+    
+      
+      {
+        id: 96,
+        title: "Aurora Awaken",
+        photo: "https://www.w3schools.com/w3images/pineapple.jpg",
+        price: "110.00",
+        summaries:
+          "Awaken your senses with the ethereal dance of colors in the Aurora Awaken.",
+        categories: "Space",
+        owner: "AuroraDreamer",
+        quantity: 4,
+      },
+    
+      
+      {
+        id: 97,
+        title: "Ethereal Echo",
+        photo: "https://www.w3schools.com/w3images/paris.jpg",
+        price: "100.00",
+        summaries:
+          "Experience the echoes of imagination with the captivating Ethereal Echo.",
+        categories: "Surreal",
+        owner: "EchoDreamer",
+        quantity: 5,
+      },
+    
+      {
+        id: 98,
+        title: "Quantum Quasar",
+        photo: "https://www.w3schools.com/w3images/newyork.jpg",
+        price: "180.00",
+        summaries:
+          "Journey to the edges of the universe with the mesmerizing Quantum Quasar.",
+        categories: "Quantum",
+        owner: "QuasarExplorer",
+        quantity: 8,
+      },
+    
+   
+      {
+        id: 99,
+        title: "Solar Symphony",
+        photo: "https://www.w3schools.com/w3images/food.jpg",
+        price: "120.00",
+        summaries:
+          "Immerse yourself in the symphony of the solar system with Solar Symphony.",
+        categories: "Space",
+        owner: "SolarSculptor",
+        quantity: 7,
+      },
+    
+      // Item 45
+      {
+        id: 100,
+        title: "Neon Nectar",
+        photo: "https://www.w3schools.com/w3images/nature.jpg",
+        price: "95.00",
+        summaries: "Dive into the vibrant glow of the city with the Neon Nectar.",
+        categories: "Cityscape",
+        owner: "NeonDreamer",
+        quantity: 10,
+      },
+    
+     
+      {
+        id: 101,
+        title: "Celestial Canvas",
+        photo: "https://www.w3schools.com/w3images/mountains.jpg",
+        price: "150.00",
+        summaries:
+          "Capture the essence of the cosmos in the stunning Celestial Canvas.",
+        categories: "Space",
+        owner: "CosmicPainter",
+        quantity: 5,
+      },
+      
+      {
+        id: 102,
+        title: "Luminous Legacy",
+        photo: "https://source.unsplash.com/random/600x500",
+        price: "110.00",
+        summaries:
+          "Leave a luminous mark with the enchanting Luminous Legacy, a testament to light and shadow.",
+        categories: "Surreal",
+        owner: "LuminaryArtist",
+        quantity: 5,
+      },
+    
+      
+      {
+        id: 103,
+        title: "Vivid Vortex",
+        photo: "https://source.unsplash.com/random/600x501",
+        price: "130.00",
+        summaries:
+          "Get caught in the whirlwind of colors with the vibrant and mesmerizing Vivid Vortex.",
+        categories: "Colorful",
+        owner: "ColorSculptor",
+        quantity: 6,
+      },
+    
+      
+      {
+        id: 104,
+        title: "Mystical Mirage",
+        photo: "https://source.unsplash.com/random/600x502",
+        price: "95.00",
+        summaries:
+          "Experience the enchantment of the desert with the Mystical Mirage, where reality meets illusion.",
+        categories: "Mystic",
+        owner: "MirageDreamer",
+        quantity: 6,
+      },
+    
+     
+      {
+        id: 105,
+        title: "Synthetic Symphony",
+        photo: "https://source.unsplash.com/random/600x503",
+        price: "150.00",
+        summaries:
+          "Immerse yourself in the harmonious blend of art and technology with Synthetic Symphony.",
+        categories: "Digital",
+        owner: "TechHarmonist",
+        quantity: 8,
+      },
+    
+    
+      {
+        id: 106,
+        title: "Ethereal Echoes",
+        photo: "https://source.unsplash.com/random/600x504",
+        price: "120.00",
+        summaries:
+          "Let the ethereal echoes resonate through your senses with this captivating artwork.",
+        categories: "Surreal",
+        owner: "EtherealArtist",
+        quantity: 9,
+      },
+    
+    
+      {
+        id: 107,
+        title: "Neon Nostalgia",
+        photo: "https://source.unsplash.com/random/600x505",
+        price: "80.00",
+        summaries:
+          "Travel back in time with the Neon Nostalgia, a digital representation of retro city vibes.",
+        categories: "Cityscape",
+        owner: "RetroExplorer",
+        quantity: 6,
+      },
+    
+      
+      {
+        id: 108,
+        title: "Cosmic Canvas",
+        photo: "https://source.unsplash.com/random/600x506",
+        price: "200.00",
+        summaries:
+          "Create your cosmic masterpiece with the captivating canvas of the universe.",
+        categories: "Cosmic",
+        owner: "CosmicArtisan",
+        quantity: 8,
+      },
+    
+      // Item 54
+      {
+        id: 109,
+        title: "Dreamy Dawn",
+        photo: "https://source.unsplash.com/random/600x507",
+        price: "90.00",
+        summaries:
+          "Awaken your dreams with the serene and enchanting beauty of the Dreamy Dawn.",
+        categories: "Surreal",
+        owner: "DreamWeaver",
+        quantity: 5,
+      },
+    
+      // Item 55
+      {
+        id: 110,
+        title: "Magnetic Melody",
+        photo: "https://source.unsplash.com/random/600x508",
+        price: "140.00",
+        summaries:
+          "Feel the magnetic pull of music with the mesmerizing Magnetic Melody.",
+        categories: "Music",
+        music: "/music/Magnetic_Melody.mp3",
+        owner: "MelodyMagnet",
+        quantity: 5,
+      },
   ];
   
 

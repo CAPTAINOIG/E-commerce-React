@@ -2,9 +2,8 @@ import React from "react";
 import { shopping } from "../../data/Shopping";
 
 const SortMenu = ({
-  setCurrentPageItem,
-  setSelectedCategory,
-  selectedCategory,
+  shuffledShopping,
+  setCurrentItems,
 }) => {
   const filterCollectionBySort = (value) => {
     let sortedCollection = [...shopping];
@@ -31,7 +30,7 @@ const SortMenu = ({
     }
 
     // setFilteredCollection(sortedCollection);
-    setCurrentPageItem(sortedCollection);
+    setCurrentItems(sortedCollection);
     // setSelectedCategory(value);
     console.log(sortedCollection);
   };
@@ -43,11 +42,10 @@ const SortMenu = ({
         </div>
         <div className="flex">
           <select
-            value={selectedCategory}
+            value={shuffledShopping}
             onChange={(e) => filterCollectionBySort(e.target.value)}
             className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border focus:bg-black"
           >
-            <option value="all">All</option>
             <option value="AZ">A - Z</option>
             <option value="ZA">Z - A</option>
             <option value="LowToHigh">Price: Low to High</option>
