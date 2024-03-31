@@ -22,6 +22,7 @@ function App() {
   return (
     <>
 
+<div className='font-[Mirza]'>
 
 
       <Routes>
@@ -33,6 +34,7 @@ function App() {
       </Routes>
 
 
+</div>
 
 
 
