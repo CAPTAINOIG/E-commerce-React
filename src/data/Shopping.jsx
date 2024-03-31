@@ -1217,30 +1217,6 @@ export const shopping = [
         owner: "CosmicBeats",
         quantity: 5,
       },
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-    
-  
->>>>>>> d1d79d190c2617c3ac2a84ca27a2cb0ef224a651
       {
         id: 81,
         title: "Vivid Voyage",
