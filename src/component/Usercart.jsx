@@ -15,24 +15,28 @@ const Usercart = () => {
   const shoppingCart = useSelector((state) => state.counterReducer.cart);
   const [message, setMessage] = useState('');
   const [viewMode, setViewMode] = useState('list'); // 'list' or 'grid'
-  // const [isDisabled, setIsDisabled] = useState(false)
+  const [isDisabled, setIsDisabled] = useState(false)
 
   const handleIncrement = (item) => {
     if (item.availableQuantity > item.cartQuantity) {
       dispatch(increment(item.id));
-      // console.log(item.cartQuantity);
-      // setisDisabbled(item.cartQuantity)
+      if (item.availableQuantity === item.cartQuantity + 1) {
+        setIsDisabled(true); // Disable increment button when available quantity is reached
+      }
     } else {
-      // setIsDisabled(true);
-      // console.log('err');
+      setIsDisabled(true); // Disable increment button when available quantity is reached
     }
   };
+  
 
 
   const handleDecrement = (item) => {
     dispatch(decrement(item.id));
+    if (item.cartQuantity === 1) {
+      setIsDisabled(false); // Enable increment button when decrementing brings the quantity to 0
+    }
   };
-
+  
   const handleRemove = (index) => {
     Swal.fire({
       title: 'Do you really want to remove this item from the cart?',
@@ -90,13 +94,13 @@ const Usercart = () => {
                       <p> ${item.price} * {item.cartQuantity} items</p>
                       <div className='flex'>
                         <p>Subtotal: ${item.price * item.cartQuantity}</p>
-                        <button onClick={() => handleRemove(index)} className="rounded-md">
+                        <button onClick={() => handleRemove(index)}className="rounded-md">
                           <CiCircleRemove size={30} className='absolute lg:mt-[-13%] lg:ms-[24%] mt-[-30%] ms-[8%] text-white bg-red-500 rounded-full font-bolder' />
                         </button>
                       </div>
                       <div className="flex justify-between mt-4">
                         <button
-                          onClick={() => handleIncrement(item)}
+                          onClick={() => handleIncrement(item)} disabled={isDisabled} 
                           className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2"
                         >
                           +
