@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { shopping } from "../../data/Shopping";
 
 const SortMenu = ({
   shuffledShopping,
   setCurrentItems,
 }) => {
+  const [selectedMenu, setSelectedMenu] = useState(""); 
   const filterCollectionBySort = (value) => {
+    console.log(value);
+    setSelectedMenu(value)
     let sortedCollection = [...shopping];
 
     switch (value) {
@@ -32,7 +35,7 @@ const SortMenu = ({
     // setFilteredCollection(sortedCollection);
     setCurrentItems(sortedCollection);
     // setSelectedCategory(value);
-    console.log(sortedCollection);
+    // console.log(sortedCollection);
   };
   return (
     <>
@@ -42,11 +45,11 @@ const SortMenu = ({
         </div>
         <div className="flex">
           <select
-            value={shuffledShopping}
+            value={selectedMenu}
             onChange={(e) => filterCollectionBySort(e.target.value)}
             className="rounded-md p-2 sm:text-xs lg:text-base bg-transparent border focus:bg-black"
           >
-          <option value="AZ">All</option>
+          <option value="All">All</option>
             <option value="AZ">A - Z</option>
             <option value="ZA">Z - A</option>
             <option value="LowToHigh">Price: Low to High</option>
