@@ -20,12 +20,13 @@ const Usercart = () => {
   const handleIncrement = (item) => {
     if (item.availableQuantity > item.cartQuantity) {
       dispatch(increment(item.id));
-      if (item.availableQuantity === item.cartQuantity + 1) {
+      if (item.availableQuantity === item.cartQuantity + item.availableQuantity) {
         setIsDisabled(true); // Disable increment button when available quantity is reached
       }
-    } else {
-      setIsDisabled(true); // Disable increment button when available quantity is reached
     }
+    //  else {
+    //   setIsDisabled(true); // Disable increment button when available quantity is reached
+    // }
   };
   
 

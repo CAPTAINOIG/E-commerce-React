@@ -152,7 +152,7 @@ const addCart = () => {
             alt=""
             className='rounded-lg shadow-lg relative'
             style={{ width: '300px', height: '300px' }} />
-          <GrNext size={40} onClick={handleNext} className='absolute lg:mt-[-12%] mt-[-45%] ms-[72%] lg:ms-[20%] bg-pink-500 p-2 text-white rounded-full cursor-pointer' />
+          <GrNext size={40} onClick={handleNext} className='absolute lg:mt-[-12%] mt-[-45%] ms-[72%] lg:ms-[22%] bg-pink-500 p-2 text-white rounded-full cursor-pointer' />
           <GrPrevious size={40} onClick={handlePrevious} className='absolute lg:mt-[-12%] mt-[-45%] ms-[-3%] lg:ms-[-1%] bg-pink-500 p-2  text-white rounded-full cursor-pointer' />
         </div>
         <div className='lg:ms-[10%] ms-10 mt-10'>

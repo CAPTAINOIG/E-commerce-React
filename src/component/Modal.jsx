@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // import CustomModal from './CustomModal';
-import CustomModal from './CustomModal';
+// import CustomModal from './CustomModal';
 
 
 const Modal = () => {
@@ -24,7 +24,7 @@ const Modal = () => {
           </button>
     
           {/* Modal componen*/}
-          <CustomModal isOpen={isModalOpen} closeModal={closeModal} />
+          {/* <CustomModal isOpen={isModalOpen} closeModal={closeModal} /> */}
         </div>
       );
 }

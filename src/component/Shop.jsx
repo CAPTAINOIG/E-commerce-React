@@ -69,7 +69,6 @@ const Shop = () => {
           totalItems={currentItems.length}
         />
       }
-
       <Sort
         setCurrentItems={setCurrentItems}
         shuffledShopping={shuffledShopping}
