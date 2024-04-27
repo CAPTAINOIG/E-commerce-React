@@ -102,7 +102,7 @@ const Usercart = () => {
                       <div className="flex justify-between mt-4">
                         <button
                           onClick={() => handleIncrement(item)} disabled={isDisabled} 
-                          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2"
+                          className={`${isDisabled ? 'bg-green-50 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2' : 'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2'}`}
                         >
                           +
                         </button>

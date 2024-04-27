@@ -3,7 +3,8 @@ import { shopping } from '../data/Shopping';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import CustomPagination from './CustomPagination';
-import Sort from './SortComponent/Sort';
+// import Sort from './SortComponent/Sort';
+import FilterComponent from './FilterComponent';
 
 const Shop = () => {
   let navigate = useNavigate();
@@ -11,6 +12,19 @@ const Shop = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentItems, setCurrentItems] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [filterType, setFilterType] = useState("Greater than");
+  const [filterValue, setFilterValue] = useState("");
+  const [openQuantity, setOpenQuantity] = useState(false);
+  const [filterQuantityType, setFilterQuantityType] = useState("Greater than");
+  const [filterQuantityValue, setFilterQuantityValue] = useState("");
+
+  const [formFilters, setFormFilters] = useState({
+    title: "",
+    category: "",
+  });
+
+
   const itemsPerPage = 10;
 
   useEffect(() => {
@@ -46,10 +60,159 @@ const Shop = () => {
     setCurrentPage(selected);
   };
 
+
+  const handleFormInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormFilters({ ...formFilters, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Selected formFilters:", formFilters);
+    // Perform filtering logic here...
+    filterCatalogueProduct();
+    setFormFilters({ ...formFilters });
+  };
+
+  // For Price
+  const toggleDropdown = () => {
+    setOpen(!open);
+  };
+
+  const handleOptionClick = (value) => {
+    setFilterType(value);
+    setOpen(false);
+  };
+
+  const onFilterValueChange = (e) => {
+    setFilterValue(e.target.value);
+  };
+
+
+  // For Quantity
+  const handleQuantityClick = (value) => {
+    setFilterQuantityType(value);
+    setOpenQuantity(false);
+  };
+
+  const toggleQuantityDropdown = () => {
+    setOpenQuantity(!openQuantity);
+  };
+  const onFilterQuantityChange = (e) => {
+    setFilterQuantityValue(e.target.value);
+  };
+
+  const symbolMap = {
+    "Greater than": ">",
+    "Greater than or equal": ">=",
+    Is: "=",
+    "Less than": "<",
+    "Less than or equal": "<=",
+    "is not": "!=",
+  };
+
+
+  const quantityMap = {
+    "Greater than": ">",
+    "Greater than or equal": ">=",
+    Is: "=",
+    "Less than": "<",
+    "Less than or equal": "<=",
+    "is not": "!=",
+  };
+
+
   const startIndex = currentPage * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedItems = currentItems.slice(startIndex, endIndex);
   const pageCount = Math.ceil(currentItems.length / itemsPerPage);
+
+
+
+  const filterCatalogueProduct = () => {
+    let filteredItems = [...shuffledShopping];
+    // console.log(filteredItems);
+
+    // the item.name first check if the name exist in the filter and if not it return 0.
+    if (formFilters.title.trim() !== "") {
+      filteredItems = filteredItems.filter((item) =>
+        item.title && item.title.toLowerCase().includes(formFilters.title.toLowerCase())
+      );
+    }
+
+    if (formFilters.category !== "") {
+      filteredItems = filteredItems.filter(
+        (item) => item.category && item.category.toLowerCase() === formFilters.category.toLowerCase()
+      );
+    }
+
+
+
+   
+
+    // PRICE FILTER
+    if (filterType && filterValue !== "") {
+      if (filterType === "Greater than") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.price) > parseFloat(filterValue)
+        );
+      } else if (filterType === "Greater than or equal") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.price) >= parseFloat(filterValue)
+        );
+      } else if (filterType === "Is") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.price) === parseFloat(filterValue)
+        );
+      } else if (filterType === "Less than") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.price) < parseFloat(filterValue)
+        );
+      } else if (filterType === "Less than or equal") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.price) <= parseFloat(filterValue)
+        );
+      } else if (filterType === "Is not") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.price) != parseFloat(filterValue)
+        );
+      }
+    }
+
+    // QUANTITY FILTER
+    if (filterQuantityType && filterQuantityValue !== "") {
+      if (filterQuantityType === "Greater than") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.qty || item.quantity) > parseFloat(filterQuantityValue)
+        );
+      }
+      else if (filterQuantityType === "Greater than or equal") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.qty) || item.quantity >= parseFloat(filterQuantityValue)
+        );
+      } else if (filterQuantityType === "Is") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.qty || item.quantity) === parseFloat(filterQuantityValue)
+        );
+      } else if (filterQuantityType === "Less than") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.qty || item.quantity) < parseFloat(filterQuantityValue)
+        )
+      }
+      else if (filterQuantityType === "Less than or equal") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.qty || item.quantity) <= parseFloat(filterQuantityValue)
+        )
+      } else if (filterQuantityType === "Is not") {
+        filteredItems = filteredItems.filter(
+          (item) => parseFloat(item.qty || item.quantity) != parseFloat(filterQuantityValue)
+        )
+      }
+
+    }
+    // here, we return our search into our currentitems which is the usestate responsible for our rendering
+    setCurrentItems(filteredItems);
+  }
 
   return (
     <>
@@ -69,10 +232,26 @@ const Shop = () => {
           totalItems={currentItems.length}
         />
       }
-      <Sort
-        setCurrentItems={setCurrentItems}
-        shuffledShopping={shuffledShopping}
-      />
+      {/* Forms */}
+      <FilterComponent
+          open={open}
+          toggleDropdown={toggleDropdown}
+          handleOptionClick={handleOptionClick}
+          symbolMap={symbolMap}
+          filterType={filterType}
+          filterValue={filterValue}
+          onFilterValueChange={onFilterValueChange}
+          formFilters={formFilters}
+          handleFormInputChange={handleFormInputChange}
+          handleSubmit={handleSubmit}
+          openQuantity={openQuantity}
+          toggleQuantityDropdown={toggleQuantityDropdown}
+          handleQuantityClick={handleQuantityClick}
+          quantityMap={quantityMap}
+          filterQuantityType={filterQuantityType}
+          filterQuantityValue={filterQuantityValue}
+          onFilterQuantityChange={onFilterQuantityChange}
+        />
 
       <h1 className='text-center text-2xl my-5 text-white font-semibold'>
         {paginatedItems.length === 0 ? '' : 'SHOPPING CATEGORY'}
