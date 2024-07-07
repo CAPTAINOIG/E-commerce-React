@@ -31,17 +31,20 @@ const addCart = () => {
     showConfirmButton: false,
     timer: 1500 // Automatically close after 1.5 seconds
   });
-
-
-
   //  const productItem = cartProduct.find((item) => item.id === action.payload); 
   // Note, the productitem is not necessary. we are just using it cos of the storage inside local storage.
   // without it it will work perfectly
   const productItem = cartProduct.find((item) => item.id === storage.id);
   if (productItem) {
+    console.log(productItem);
     dispatch(increment(productItem.id));
     // localStorage.setItem('item', JSON.stringify(productItem));
-  } else {
+  } 
+  //  else if (availableQuantity > cartQuantity ) {
+  //   console.log('iss');
+  //   }
+  
+  else {
     let newCart = {
       owner: storage.owner,
       title: storage.title,

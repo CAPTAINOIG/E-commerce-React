@@ -256,7 +256,7 @@ const Shop = () => {
       <h1 className='text-center text-2xl my-5 text-white font-semibold'>
         {paginatedItems.length === 0 ? '' : 'SHOPPING CATEGORY'}
       </h1>
-      <div className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-4 dark:text-gray-600 text-pink-600 lg:p-0 p-5'>
+      <div className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-2 gap-7 lg:gap-4 md:gap-4 dark:text-gray-600 text-pink-600 lg:p-0 p-5 px-3 lg:ms-0 md:ms-0 ms-[-20px]'>
         {paginatedItems.length === 0 ? (
           <div className="text-white text-xl lg:w-[500px] lg:ms-[450px] lg:mb-[150px]">
             Sorry, we couldn't find any results
@@ -265,10 +265,10 @@ const Shop = () => {
           paginatedItems.map((item, i) => (
             <div
               onClick={() => productDetail(item)}
-              className='bg-white text-sm rounded-lg lg:p-2 p-5 shadow-md cursor-pointer'
+              className='bg-white text-sm rounded-lg lg:p-2 p-3 w-[110%] md:w-[100%] lg:w-[100%] shadow-md cursor-pointer'
               key={i}
             >
-              <img src={item.photo} alt={item.title} className='w-40 h-40 object-cover rounded-md mx-auto hover:scale-110' />
+              <img src={item.photo} alt={item.title} className='w-40 lg:h-40 md:h-40 h-20 object-cover rounded-md mx-auto hover:scale-110' />
               <h1 className='text-xl font-semibold mt-4'>{item.title}</h1>
               <p className='mt-2'>{item.categories}</p>
               <p className=' mt-2'>{item.summaries}</p>
@@ -280,6 +280,20 @@ const Shop = () => {
     </>
   );
 }
+
+{/* <div className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-2 gap-7 lg:gap-4 md:gap-4 dark:text-gray-600 text-pink-600 lg:p-0 px-3 lg:ms-0 md:ms-0 ms-[-20px]'>
+        {paginatedItems.length === 0 ? (
+          <div className="text-white text-xl lg:w-[500px] lg:ms-[450px] lg:mb-[150px]">
+            Sorry, we couldn't find any results
+          </div>
+        ) : (
+          paginatedItems.map((item, i) => (
+            <div
+              onClick={() => productDetail(item)}
+              className='bg-white text-sm rounded-lg lg:p-2 md:p-2 sm:w-[110%] p-7 h-[95%] shadow-md cursor-pointer'
+              key={i}
+            >
+              <img src={item.photo} alt={item.title} className='w-40 h-20 object-cover rounded-md hover:scale-110' /> */}
 
 export default Shop
 

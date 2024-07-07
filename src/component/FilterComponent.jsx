@@ -131,7 +131,7 @@ const FilterComponent = ({
           
               </div>
           <button
-            className="bg-white rounded border hover:bg-[#089451] hover:text-white hover:border-white text-[#089451] w-[40%] lg:mt-6 h-[35px]"
+            className="bg-white rounded border hover:bg-[#089451] hover:text-white hover:border-white text-[#089451] w-[40%] lg:mt-6 h-[35px] mt-5"
             type="submit"
             >
             Search
