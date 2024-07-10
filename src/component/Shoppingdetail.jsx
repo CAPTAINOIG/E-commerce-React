@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GrNext, GrPrevious } from 'react-icons/gr'
+// import { GrNext, GrPrevious } from 'react-icons/gr'
 import Shopheader from './Shopheader';
 import Shopfooter from './Shopfooter';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,13 +10,12 @@ import Swal from 'sweetalert2'; // Import SweetAlert
 const Shoppingdetail = () => {
   const dispatch = useDispatch();
   const cartProduct = useSelector((state) => state.counterReducer.cart);
-  // console.log(cartProduct);
+  console.log(cartProduct);
 
   let storage = JSON.parse(localStorage.getItem('productdetail'));
   // console.log(storage);
 
   const [storageData, setStorageData] = useState({});
-  // const [current, setCurrent] = useState(0); // Initialize current to 0 for the first image
   const [mainImage, setMainImage] = useState('')
 
   useEffect(() => {
@@ -40,10 +39,6 @@ const addCart = () => {
     dispatch(increment(productItem.id));
     // localStorage.setItem('item', JSON.stringify(productItem));
   } 
-  //  else if (availableQuantity > cartQuantity ) {
-  //   console.log('iss');
-  //   }
-  
   else {
     let newCart = {
       owner: storage.owner,
@@ -61,42 +56,8 @@ const addCart = () => {
     };
     // console.log(newCart);
     dispatch(addToCart(newCart));
-  }
-};
-
-
-
-// // to save to database
-
-// const addCart = () => {
-//   Swal.fire({
-//     icon: 'success',
-//     title: 'Product added successfully',
-//     showConfirmButton: false,
-//     timer: 1500
-//   });
-
-//   const productItem = cartProduct.find((item) => item.id === storage.id);
-
-//   if (productItem) {
-//     dispatch(increment(productItem.id));
-//   } else {
-//     let newCart = {
-//       owner: storage.owner,
-//       title: storage.title,
-//       id: storage.id,
-//       price: storage.price,
-//       cartQuantity: 1,
-//       photo: storage.photo,
-//       photo2: storage.photo2,
-//       photo3: storage.photo3,
-//       photo4: storage.photo4,
-//       summaries: storage.summaries,
-//       categories: storage.categories,
-//     };
-
-//     // Assuming your backend endpoint for adding to cart is "/api/cart/add"
-//     fetch('/api/cart/add', {
+    // for instance, lets say you want to send the data to the backend, you can call your api here. eg
+    // fetch('/api/cart/add', store {
 //       method: 'POST',
 //       headers: {
 //         'Content-Type': 'application/json',
@@ -109,18 +70,9 @@ const addCart = () => {
 //         }
 //         return response.json();
 //       })
-//       .then(data => {
-//         // Handle success response from the server, if needed
-//         dispatch(addToCart(newCart));
-//       })
-//       .catch(error => {
-//         console.error('Error adding product to cart:', error);
-//         // Handle error, show an alert, or perform other actions
-//       });
-//   }
-// };
-
-
+// Note, your second parameter will be your store. then you can the post it to the database.
+  }
+};
 
 
   const images = [storageData.photo, storageData.photo3, storageData.photo2, storageData.photo4];
@@ -192,22 +144,7 @@ const addCart = () => {
             onClick={() => handleImageClick(storageData.photo)}
           />
         </div>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+      </div>  
         <div className='lg:ms-[10%] ms-10 mt-10'>
           <div className='text-xl font-semibold mt-2'>{storageData.title}</div>
           <div className='text-xl font-bold mt-2 text-pink-600'>{storageData.categories}</div>
@@ -215,7 +152,6 @@ const addCart = () => {
           <div className='mt-2 text-sm'>{storageData.summaries}</div>
           <button className='bg-pink-600 lg:w-[50%] w-[89%] p-2 mt-10 text-white rounded font-bold' onClick={addCart}>ADD TO CART</button>
         </div>
-
       </div>
       <Shopfooter />
     </>

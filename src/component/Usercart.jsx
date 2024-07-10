@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement, remove } from '../Redux/counterSlice';
 import { CiCircleRemove } from 'react-icons/ci';
 import Checkout from './Checkout';
-import Shopfooter from './Shopfooter';
+// import Shopfooter from './Shopfooter';
 import Shopheader from './Shopheader';
 import Swal from 'sweetalert2';
 import carty from '../assets/carty.png';
@@ -32,9 +32,9 @@ const Usercart = () => {
 
 
   const handleDecrement = (item) => {
-    dispatch(decrement(item.id));
+    dispatch(decrement(item.id)); 
     if (item.cartQuantity === 1) {
-      setIsDisabled(false); // Enable increment button when decrementing brings the quantity to 0
+      setIsDisabled(true); // Enable increment button when decrementing brings the quantity to 0
     }
   };
   
@@ -101,13 +101,13 @@ const Usercart = () => {
                       </div>
                       <div className="flex justify-between mt-4">
                         <button
-                          onClick={() => handleIncrement(item)} disabled={isDisabled} 
-                          className={`${isDisabled ? 'bg-green-50 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2' : 'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2'}`}
+                          onClick={() => handleIncrement(item)} disabled={item?.availableQuantity === item?.cartQuantity}  
+                          className='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2'
                         >
                           +
                         </button>
                         {item.cartQuantity}
-                        <button onClick={() => handleDecrement(item)} className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">-</button>
+                        <button onClick={() => handleDecrement(item)} disabled={item?.cartQuantity === 1} className={`${item?.cartQuantity === 1 ? 'bg-green-50 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2' : 'bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md'}`}>-</button>
                       </div>
                     </div>
                   </li>
