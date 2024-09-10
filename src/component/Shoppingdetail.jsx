@@ -30,15 +30,25 @@ const addCart = () => {
     showConfirmButton: false,
     timer: 1500 // Automatically close after 1.5 seconds
   });
-  //  const productItem = cartProduct.find((item) => item.id === action.payload); 
-  // Note, the productitem is not necessary. we are just using it cos of the storage inside local storage.
-  // without it it will work perfectly
+
   const productItem = cartProduct.find((item) => item.id === storage.id);
+
   if (productItem) {
     console.log(productItem);
-    dispatch(increment(productItem.id));
-    // localStorage.setItem('item', JSON.stringify(productItem));
-  } 
+    if (productItem.cartQuantity < productItem.availableQuantity) {
+      console.log('Incrementing product quantity');
+      dispatch(increment(productItem.id));
+    } else {
+      console.log('Cannot add more than available stock');
+      // Optionally, show a toast notification or alert here
+      Swal.fire({ // Use SweetAlert instead of alert
+        icon: 'error',
+        title: 'Cannot add more than available stock',
+        showConfirmButton: false,
+        timer: 1500 // Automatically close after 1.5 seconds
+      });
+    }
+  }
   else {
     let newCart = {
       owner: storage.owner,
