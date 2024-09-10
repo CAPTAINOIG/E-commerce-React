@@ -64,23 +64,7 @@ const addCart = () => {
       summaries: storage.summaries,
       categories: storage.categories,
     };
-    // console.log(newCart);
     dispatch(addToCart(newCart));
-    // for instance, lets say you want to send the data to the backend, you can call your api here. eg
-    // fetch('/api/cart/add', store {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(newCart),
-//     })
-//       .then(response => {
-//         if (!response.ok) {
-//           throw new Error('Failed to add product to cart');
-//         }
-//         return response.json();
-//       })
-// Note, your second parameter will be your store. then you can the post it to the database.
   }
 };
 

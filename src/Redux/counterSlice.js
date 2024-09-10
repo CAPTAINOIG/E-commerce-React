@@ -1,42 +1,46 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
+const initialCart = () => {
+  //  after setting d ifo in our reducer we will collect it and pass it along
+  const item = window.localStorage.getItem('customerCart')
+  //** Parse stored json or if none return initialValue
+  return item ? JSON.parse(item) : []
+
+}
 
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: 'commerce',
   initialState: {
-    cart: []
+    cart: initialCart()
   },
   reducers: {
-    increment: (state, payload) => {
-      // state.cart = state.cart + 1
-      // note, the payload is the id of the product
-      let productItem = state.cart.find((item) => item.id === payload.payload)
-      //     console.log(productItem);
-      productItem.cartQuantity +=1
-      // console.log(productItem.cartQuantity);
+    addToCart: (state, payload) => {
+      const addToCart = state.cart.push(payload.payload)
+      localStorage.setItem("customerCart", JSON.stringify(state.cart))
     },
 
-    decrement: (state, action) =>{
-        // state.cart = state.cart > 0 ? state.cart - 1 : 0
-        let productItem = state.cart.find((item) => item.id === action.payload)
-        productItem.cartQuantity > 1 ? productItem.cartQuantity -=1 : 0
-        // console.log(payload);
+    increment: (state, action) => {
+      let productItem = state.cart.find((item) => item.id === action.payload);
+      if (productItem) {
+        productItem.cartQuantity += 1;
+      }
+      localStorage.setItem("customerCart", JSON.stringify(state.cart)); // Update local storage
     },
-    remove: (state, action)=> {
+
+    decrement: (state, action) => {
+      let productItem = state.cart.find((item) => item.id === action.payload);
+      if (productItem && productItem.cartQuantity > 1) {
+        productItem.cartQuantity -= 1;
+      }
+      localStorage.setItem("customerCart", JSON.stringify(state.cart)); // Update local storage
+    },
+    remove: (state, action) => {
       state.cart.splice(action.payload, 1)
-    },
-    
+      localStorage.setItem("customerCart", JSON.stringify(state.cart))
 
-    
-    addToCart: (state, payload) =>{
-      state.cart.push(payload.payload)
-      console.log(payload.payload);
-      // localStorage.setItem("cartItems", JSON.stringify(state.cart)) 
-  },
+    },
   }
 })
-
-export const { increment, decrement, remove, addToCart } = counterSlice.actions
+export const { addToCart, increment, decrement, remove } = counterSlice.actions
 export default counterSlice.reducer
-
